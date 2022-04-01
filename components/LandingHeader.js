@@ -1,0 +1,26 @@
+import React from 'react'
+import Image from 'next/image'
+
+function LandingHeader() {
+  return (
+    <header className='w-full px-6 py-6'>
+        <div className='flex justify-between bg-white rounded overflow-hidden shadow-lg hover:shadow-xl'>
+            <h1 className='px-5 py-3 self-center text-left sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl lg:w-1/2 xl:w-1/2 2xl:w-9/12 font-extrabold tracking-tighter'>
+                Timi Kei delivers a stellar oratory performance on The Purpose EP
+            </h1>
+            <div className='sm:w-1/2 lg:w-1/2 flex content-center justify-end'>
+                <Image 
+                    src="/purposeheader.jpeg" 
+                    alt='The Purpose EP'
+                    width={533}
+                    height={533}
+                    className='object-cover'
+                />
+            </div>
+            
+        </div>
+    </header>
+  )
+}
+
+export default LandingHeader
