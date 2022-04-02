@@ -16,7 +16,7 @@ function Navigation() {
     }
 
     return (
-    <div className='font-body py-4 px-8'>
+    <div className='font-body py-4 px-8 rounded shadow-md'>
         <nav className='flex justify-between'>
             <Link href="/"><a className='w-1/4 text-xl font-bold px-3'>Brand.</a></Link>
 
