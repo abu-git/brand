@@ -7,7 +7,7 @@ function About() {
     <>
         <Navigation />
         <section className='mt-8 px-6 grid grid-cols-1 md:grid-cols-2'>
-            <div className='md:text-5xl text-4xl font-bold text-right pr-5 pb-5'>
+            <div className='md:text-5xl lg:text-6xl text-4xl font-bold text-right pr-5 pb-5'>
                 <h1>We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community. This is one of our contributions.</h1>
             </div>
             <div className='bg-white rounded drop-shadow-lg px-3 py-5 items-center'>

@@ -54,7 +54,7 @@ function Navigation() {
             <ul className='md:hidden text-right font-semibold py-5'>
                 <Link href="/"><li className='py-1'>Home</li></Link>
                 <li className='py-1'>Articles</li>
-                <li className='py-1'>About</li>
+                <Link href="/about"><li className='py-1'>About</li></Link>
                 <li className='py-1'>Contact</li>
             </ul>
         }
