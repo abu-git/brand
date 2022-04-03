@@ -18,14 +18,16 @@ function Navigation() {
     return (
     <div className='font-body py-4 px-8 rounded shadow-md'>
         <nav className='flex justify-between'>
+            {/* Logo  */}
             <Link href="/"><a className='w-1/4 text-xl font-bold px-3'>Brand.</a></Link>
-
+            {/* Page Links */}
             <ul className='hidden md:flex justify-between font-semibold items-center w-1/2 px-3'>
                 <Link href="/"><li className='text-lg cursor-pointer'>Home</li></Link>
+                <li className='text-lg cursor-pointer'>Articles</li>
                 <Link href="/about"><li className='text-lg cursor-pointer'>About</li></Link>
                 <li className='text-lg cursor-pointer'>Contact</li>
             </ul>
-
+            {/* menu button ---hidden unless on small devices */}
             <button className="md:hidden" onClick={displayMenu}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -37,6 +39,7 @@ function Navigation() {
         {displayMobileMenu === true && 
             <ul className='md:hidden text-right font-semibold py-5'>
                 <li className='py-1'>Home</li>
+                <li className='py-1'>Articles</li>
                 <li className='py-1'>About</li>
                 <li className='py-1'>Contact</li>
             </ul>
