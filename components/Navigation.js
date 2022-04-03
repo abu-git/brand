@@ -21,9 +21,9 @@ function Navigation() {
             <Link href="/"><a className='w-1/4 text-xl font-bold px-3'>Brand.</a></Link>
 
             <ul className='hidden md:flex justify-between font-semibold items-center w-1/2 px-3'>
-                <li className='text-lg'>Home</li>
-                <li className='text-lg'>About</li>
-                <li className='text-lg'>Contact</li>
+                <Link href="/"><li className='text-lg cursor-pointer'>Home</li></Link>
+                <Link href="/about"><li className='text-lg cursor-pointer'>About</li></Link>
+                <li className='text-lg cursor-pointer'>Contact</li>
             </ul>
 
             <button className="md:hidden" onClick={displayMenu}>
