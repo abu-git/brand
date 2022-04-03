@@ -11,14 +11,14 @@ function LandingGrid() {
                     width={433}
                     height={433}
                     alt="The Purpose EP"
-                    src="/purposeheader.jpeg"
+                    src="/boomsha.jpeg"
                     layout='responsive'
                     className='brightness-50'
                 />
-                <h3 className='absolute brightness-100 font-bold text-3xl -mt-32 text-white px-5'>'The Purpose' EP by Timi Kei and iamMHP</h3>
+                <h3 className='absolute brightness-100 font-bold text-3xl -mt-36 text-white px-5'>'Peace God' EP by Daboomsha and Stoute Louis</h3>
             </div>
             <span className='text-sm text-gray-700 mt-2 mb-2 text-justify px-3'>
-                Timi Kei delivers a stellar oratory performance on The Purpose Ep. Weaving his religion with practical ideas his use of a vast vocabulary is very much evident.
+                We take a deep dive into this masterpiece from two Nigerian creatives. Daboomsha and Stoute Louis collaborate and deliver a nostalgic sound that reminds us why we love Hip Hop.
             </span>
             <span className='flex justify-end'>
                 <h5 className='px-3 text-xs text-gray-500 self-center'>April 02, 2022</h5>
@@ -44,7 +44,7 @@ function LandingGrid() {
                     layout='responsive'
                     className='brightness-50'
                 />
-                <h3 className='absolute brightness-100 font-bold text-3xl -mt-32 text-white px-5'>'A Travel Guide for the Broken' by Synik</h3>
+                <h3 className='absolute brightness-100 font-bold text-3xl -mt-36 text-white px-5'>'A Travel Guide for the Broken' by Synik</h3>
             </div>
             <span className='text-sm text-gray-700 mt-2 mb-2 text-justify px-3'>
                 We set our ears and sights on a Zimbabwean creative by the name of Synik. A conceptually pleasing sound offering with a plethora of emotional themes to vibe to.
@@ -73,7 +73,7 @@ function LandingGrid() {
                     layout='responsive'
                     className='brightness-50'
                 />
-                <h3 className='absolute brightness-100 font-bold text-3xl -mt-32 text-white px-5'>'Africore' by Holstar</h3>
+                <h3 className='absolute brightness-100 font-bold text-3xl -mt-36 text-white px-5'>'Africore' by Holstar</h3>
             </div>
             <span className='text-sm text-gray-700 mt-2 mb-2 text-justify px-3'>
                 Much is to be said of the Holstar. A Zambian creative, music executive and African music champion. Africore is neatly executed.
