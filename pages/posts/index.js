@@ -21,7 +21,7 @@ function Posts() {
                 </div>
                 
                 <div className='w-2/3 flex items-center'>
-                    <h3 className='w-fit text-xs md:text-2xl lg:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>Timi Kei delivers a stellar oratory performance on The Purpose EP.</span> Production credits going to iamMHP also known as MHP.</h3>
+                    <h3 className='w-fit text-xs md:text-2xl lg:text-3xl xl:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>Timi Kei delivers a stellar oratory performance on The Purpose EP.</span> Production credits going to iamMHP also known as MHP.</h3>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@ function Posts() {
                 </div>
                 
                 <div className='w-2/3 flex items-center'>
-                    <h3 className='w-fit text-xs md:text-2xl lg:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>'Peace God' EP by Daboomsha and Stoute Louis</span> We dive deep into this masterpiece from two Nigerian creatives: Daboomsha and Stoute Louis</h3>
+                    <h3 className='w-fit text-xs md:text-2xl lg:text-3xl xl:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>'Peace God' EP by Daboomsha and Stoute Louis</span> We dive deep into this masterpiece from two Nigerian creatives: Daboomsha and Stoute Louis</h3>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@ function Posts() {
                 </div>
                 
                 <div className='w-2/3 flex items-center'>
-                    <h3 className='w-fit text-xs md:text-2xl lg:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>'A Travel Guide for the Broken' by Synik</span> We set our ears on a Zimbabwean creative by the name of Synik. A conceptually pleasing sound offering.</h3>
+                    <h3 className='w-fit text-xs md:text-2xl lg:text-3xl xl:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>'A Travel Guide for the Broken' by Synik</span> We set our ears on a Zimbabwean creative by the name of Synik. A conceptually pleasing sound offering.</h3>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@ function Posts() {
                 </div>
                 
                 <div className='w-2/3 flex items-center'>
-                    <h3 className='w-fit text-xs md:text-2xl lg:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>'Africore' by Holstar</span> Much is to be said of the Holstar. A Zambian creative, music executive and African music champion. Africore is neatly executed.</h3>
+                    <h3 className='w-fit text-xs md:text-2xl lg:text-3xl xl:text-4xl font-light p-3 items-center'><span className='text-md font-semibold'>'Africore' by Holstar</span> Much is to be said of the Holstar. A Zambian creative, music executive and African music champion. Africore is neatly executed.</h3>
                 </div>
             </div>
         </section>

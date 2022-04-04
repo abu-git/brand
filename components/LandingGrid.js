@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function LandingGrid() {
   return (
@@ -94,7 +95,9 @@ function LandingGrid() {
             </div>
         </div>
         <div className='flex justify-center mt-12'>
+            <Link href="/posts">
             <div className='rounded-full py-2 px-3 uppercase font-bold cursor-pointer tracking-wider border-black border-2 hover:text-white hover:bg-black transition ease-out duration-500'>More Posts</div>
+            </Link>
         </div>
     </>
   )

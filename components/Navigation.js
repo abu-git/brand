@@ -52,10 +52,10 @@ function Navigation() {
         {/*---- conditional rendering for mobile menu display ----*/}
         {displayMobileMenu === true && 
             <ul className='md:hidden text-right font-semibold py-5'>
-                <Link href="/"><li className='py-1'>Home</li></Link>
-                <Link href="/posts"><li className='py-1'>Articles</li></Link>
-                <Link href="/about"><li className='py-1'>About</li></Link>
-                <li className='py-1'>Contact</li>
+                <Link href="/"><li className='py-1 cursor-pointer'>Home</li></Link>
+                <Link href="/posts"><li className='py-1 cursor-pointer'>Articles</li></Link>
+                <Link href="/about"><li className='py-1 cursor-pointer'>About</li></Link>
+                <li className='py-1 cursor-pointer'>Contact</li>
             </ul>
         }
     </div>
