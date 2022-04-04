@@ -28,7 +28,7 @@ function Navigation() {
             {/* Page Links */}
             <ul className='hidden md:flex justify-between font-semibold items-center w-1/2 px-3'>
                 <Link href="/"><li className='text-lg cursor-pointer'>Home</li></Link>
-                <li className='text-lg cursor-pointer'>Articles</li>
+                <Link href="/posts"><li className='text-lg cursor-pointer'>Articles</li></Link>
                 <Link href="/about"><li className='text-lg cursor-pointer'>About</li></Link>
                 <li className='text-lg cursor-pointer'>Contact</li>
             </ul>
@@ -53,7 +53,7 @@ function Navigation() {
         {displayMobileMenu === true && 
             <ul className='md:hidden text-right font-semibold py-5'>
                 <Link href="/"><li className='py-1'>Home</li></Link>
-                <li className='py-1'>Articles</li>
+                <Link href="/posts"><li className='py-1'>Articles</li></Link>
                 <Link href="/about"><li className='py-1'>About</li></Link>
                 <li className='py-1'>Contact</li>
             </ul>
