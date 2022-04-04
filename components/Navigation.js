@@ -24,7 +24,7 @@ function Navigation() {
     <div className='font-body py-4 px-8 rounded shadow-md'>
         <nav className='flex justify-between'>
             {/* Logo  */}
-            <Link href="/"><a className='w-1/4 text-xl font-bold px-3'>Brand.</a></Link>
+            <Link href="/"><a className='w-1/4 text-xl font-bold px-3 bg-clip-text text-transparent bg-gradient-to-l from-indigo-600 to-fuchsia-700'>Brand.</a></Link>
             {/* Page Links */}
             <ul className='hidden md:flex justify-between font-semibold items-center w-1/2 px-3'>
                 <Link href="/"><li className='text-lg cursor-pointer'>Home</li></Link>
