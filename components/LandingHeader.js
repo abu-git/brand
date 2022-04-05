@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-function LandingHeader() {
-  return (
+function LandingHeader({post}) {
+    /*  
+        The Header info is retrieved from Strapi   
+    */
+
+    return (
     <header className='w-full px-6 py-6'>
         <div className='flex justify-between bg-white rounded overflow-hidden shadow-lg hover:shadow-xl cursor-pointer dark:bg-slate-800 dark:text-gray-100'>
             <div className="sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl lg:w-1/2 xl:w-1/2 2xl:w-9/12 font-extrabold flex items-center ...">
                 <h1 className="bg-clip-text text-transparent bg-gradient-to-l from-indigo-500 to-fuchsia-700 px-5 py-3 self-center text-left  tracking-tighter">
-                Timi Kei delivers a stellar oratory performance on The Purpose EP
+                {/* Header retrieved from database */}
+                {post.title}
                 </h1>
             </div>
             <div className='sm:w-1/2 lg:w-1/2 flex content-center justify-end'>
                 <Image 
-                    src="/purposeheader.jpeg" 
+                    src={`/${post.gridImage}`}
                     alt='The Purpose EP'
                     width={533}
                     height={533}

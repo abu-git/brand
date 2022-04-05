@@ -21,12 +21,12 @@ function Navigation() {
 
         if(currentTheme === 'dark'){
             return(
-                <SunIcon className="w-7 h-7" role="button" onClick={() => setTheme('light')} />
+                <SunIcon className="w-7 h-7 hover:fill-slate-300" role="button" onClick={() => setTheme('light')} />
             )
         }
         else {
             return(
-                <MoonIcon className="w-7 h-7" role="button" onClick={() => setTheme('dark')} />
+                <MoonIcon className="w-7 h-7 hover:fill-slate-700" role="button" onClick={() => setTheme('dark')} />
             )
         }
     }
