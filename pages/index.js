@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import { useState, useEffect } from 'react'
 
 export default function Home({posts}) {
-  //retreive main header data
+  //retreive main header grid data
   //console.log(posts.data)
   const [gridPosts, setGridPosts] = useState([])
 
@@ -18,8 +18,7 @@ export default function Home({posts}) {
   return (
     <div className='bg-white dark:bg-slate-900'>
       <Navigation />
-      {/* Header post is chosen directly using its id */}
-      <LandingHeader post={posts.data[0].attributes} />
+      <LandingHeader post={posts.data[0].attributes} />{/* -----------> Header post is chosen directly using its id */}
       <LandingGrid posts={gridPosts} />
       <Footer />
     </div>

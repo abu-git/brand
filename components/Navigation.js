@@ -62,7 +62,7 @@ function Navigation() {
                 <Link href="/"><li className='text-lg cursor-pointer'>Home</li></Link>
                 <Link href="/posts"><li className='text-lg cursor-pointer'>Articles</li></Link>
                 <Link href="/about"><li className='text-lg cursor-pointer'>About</li></Link>
-                <li className='text-lg cursor-pointer'>Contact</li>
+                <li className='text-lg disabled text-slate-500'>Contact</li>
             </ul>
 
             {/* theme changer button */}
@@ -92,7 +92,7 @@ function Navigation() {
                 <Link href="/"><li className='py-1 cursor-pointer'>Home</li></Link>
                 <Link href="/posts"><li className='py-1 cursor-pointer'>Articles</li></Link>
                 <Link href="/about"><li className='py-1 cursor-pointer'>About</li></Link>
-                <li className='py-1 cursor-pointer'>Contact</li>
+                <li className='py-1 disabled text-slate-500'>Contact</li>
             </ul>
         }
     </div>

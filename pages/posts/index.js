@@ -2,14 +2,41 @@ import React from 'react'
 import Image from 'next/image'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import PostsGridItem from '../../components/PostsGridItem'
+import axios from 'axios'
 
-function Posts() {
+function Posts({posts}) {
   return (
     <div className='bg-white dark:bg-slate-900'>
         <Navigation />
         <section className='mt-8 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
             <h2 className='mb-5 p-2 md:text-xl text-md font-semibold'>All Posts</h2>
-            {/* post item */}
+            {posts.data.map((post) => {
+                return<PostsGridItem post={post} key={post.id}/>
+            })}
+        </section>
+        <Footer />
+    </div>
+  )
+}
+
+export default Posts
+
+export async function getStaticProps() {
+    const postsResponse = await axios.get("http://localhost:1337/api/posts")
+    //console.log("data array",postsResponse.data)
+  
+  
+    return {
+        props: {
+            posts: postsResponse.data,
+        },
+    }
+}
+
+
+
+{/* post item 
             <div className='flex bg-white dark:bg-slate-800 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image
@@ -69,10 +96,4 @@ function Posts() {
                     <h3 className='w-fit text-xs md:text-2xl lg:text-3xl font-light p-3 items-center'><span className='text-md font-semibold'>'Africore' by Holstar.</span> Much is to be said of the Holstar. A Zambian creative, music executive and African music champion. Africore is neatly executed.</h3>
                 </div>
             </div>
-        </section>
-        <Footer />
-    </div>
-  )
-}
-
-export default Posts
+        */}
