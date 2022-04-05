@@ -5,12 +5,12 @@ import Footer from '../../components/Footer'
 
 function Posts() {
   return (
-    <>
+    <div className='bg-white dark:bg-slate-900'>
         <Navigation />
-        <section className='mt-8 px-6 lg:px-48 flex flex-col'>
+        <section className='mt-8 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
             <h2 className='mb-5 p-2 md:text-xl text-md font-semibold'>All Posts</h2>
             {/* post item */}
-            <div className='flex bg-white rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
+            <div className='flex bg-white dark:bg-slate-800 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image
                         width={20}
@@ -25,7 +25,7 @@ function Posts() {
                 </div>
             </div>
 
-            <div className='flex bg-white rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
+            <div className='flex bg-white dark:bg-slate-800 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image
                         width={20}
@@ -40,7 +40,7 @@ function Posts() {
                 </div>
             </div>
 
-            <div className='flex bg-white rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
+            <div className='flex bg-white dark:bg-slate-800 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image
                         width={20}
@@ -55,7 +55,7 @@ function Posts() {
                 </div>
             </div>
 
-            <div className='flex bg-white rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
+            <div className='flex bg-white dark:bg-slate-800 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image
                         width={20}
@@ -71,7 +71,7 @@ function Posts() {
             </div>
         </section>
         <Footer />
-    </>
+    </div>
   )
 }
 
