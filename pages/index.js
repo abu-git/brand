@@ -38,7 +38,7 @@ export default function Home({posts}) {
 
 export async function getStaticProps() {
   //const postsResponse = await axios.get("http://localhost:1337/api/posts") //<---- for local machine
-  const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
+  const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`).then().catch(err => console.log(err))
   //console.log("data array",postsResponse.data)
 
 
