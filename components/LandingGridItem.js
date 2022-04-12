@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 function LandingGridItem({post}) {
-    console.log("post", post)
+    
     return (
         <div className='flex flex-col cursor-pointer bg-white dark:bg-slate-800 dark:text-gray-100 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-2xl'>
                 <div className='relative'>
