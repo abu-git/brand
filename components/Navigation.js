@@ -59,9 +59,9 @@ function Navigation() {
 
             {/* Page Links */}
             <ul className='hidden md:flex justify-between font-semibold items-center w-1/2 px-3'>
-                <Link href="/"><li className='text-lg cursor-pointer'>Home</li></Link>
-                <Link href="/posts"><li className='text-lg cursor-pointer'>Articles</li></Link>
-                <Link href="/about"><li className='text-lg cursor-pointer'>About</li></Link>
+                <Link href="/" passHref><li className='text-lg cursor-pointer'>Home</li></Link>
+                <Link href="/posts" passHref><li className='text-lg cursor-pointer'>Articles</li></Link>
+                <Link href="/about" passHref><li className='text-lg cursor-pointer'>About</li></Link>
                 <li className='text-lg disabled text-slate-500'>Contact</li>
             </ul>
 
@@ -89,9 +89,9 @@ function Navigation() {
         {/*---- conditional rendering for mobile menu display ----*/}
         {displayMobileMenu === true && 
             <ul className='md:hidden text-right font-semibold py-5'>
-                <Link href="/"><li className='py-1 cursor-pointer'>Home</li></Link>
-                <Link href="/posts"><li className='py-1 cursor-pointer'>Articles</li></Link>
-                <Link href="/about"><li className='py-1 cursor-pointer'>About</li></Link>
+                <Link href="/" passHref><li className='py-1 cursor-pointer'>Home</li></Link>
+                <Link href="/posts" passHref><li className='py-1 cursor-pointer'>Articles</li></Link>
+                <Link href="/about" passHref><li className='py-1 cursor-pointer'>About</li></Link>
                 <li className='py-1 disabled text-slate-500'>Contact</li>
             </ul>
         }

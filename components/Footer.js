@@ -25,7 +25,7 @@ function Footer() {
     </footer>
     <div className='flex justify-center'>
         <h4 className='text-md font-light pb-5'>
-            ©2022 Design by <Link href="http://samcv.herokuapp.com"><span className='bg-clip-text text-transparent bg-gradient-to-l from-indigo-500 to-fuchsia-700 cursor-pointer'>Samuel Abu</span></Link>
+            ©2022 Design by <Link href="http://samcv.herokuapp.com" passHref><span className='bg-clip-text text-transparent bg-gradient-to-l from-indigo-500 to-fuchsia-700 cursor-pointer'>Samuel Abu</span></Link>
         </h4>
     </div>
     </>

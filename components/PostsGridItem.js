@@ -10,6 +10,7 @@ function PostsGridItem({post}) {
                     height={20}
                     src={`/${post.attributes.gridImage}`}
                     layout='responsive'
+                    alt={post.attributes.title}
                 />
             </div>
             
