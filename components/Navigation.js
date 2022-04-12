@@ -52,7 +52,11 @@ function Navigation() {
     <div className='font-body py-4 px-8 rounded shadow-md dark:bg-slate-900 dark:text-gray-100'>
         <nav className='flex justify-between'>
             {/* Logo  */}
-            <Link href="/"><a className='w-1/4 text-xl font-bold px-3 bg-clip-text text-transparent bg-gradient-to-l from-indigo-600 to-fuchsia-700'>Brand.</a></Link>
+            <Link href="/">
+                <a className='w-1/4 text-xl font-bold px-3 bg-clip-text text-transparent bg-gradient-to-l from-indigo-600 to-fuchsia-700'>
+                    Brand.
+                </a>
+            </Link>
             
             
 

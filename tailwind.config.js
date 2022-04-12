@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Dosis']
+        body: ['Dosis', 'sans-serif']
       }
     },
   },

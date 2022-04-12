@@ -7,8 +7,6 @@ import Footer from '../components/Footer'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-// for deployed app
-//const { NEXT_PUBLIC_STRAPI_API_URL } = process.env 
 
 export default function Home({posts}) {
   //retreive main header grid data
@@ -21,9 +19,9 @@ export default function Home({posts}) {
 
   return (
     <motion.div 
-    exit={{ opacity: 0 }}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
       <div className='bg-white dark:bg-slate-900'>
         <Navigation />
