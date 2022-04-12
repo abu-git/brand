@@ -15,7 +15,7 @@ function PostsGridItem({post}) {
             </div>
             
             <div className='w-2/3 flex items-center'>
-                <h3 className='w-fit text-sm md:text-2xl lg:text-3xl font-light p-2 items-center'>
+                <h3 className='w-fit text-sm md:text-2xl lg:text-3xl font-light p-2 items-center text-justify'>
                     <span className='text-md font-semibold'>{post.attributes.title} </span>{post.attributes.description}
                 </h3>
             </div>
