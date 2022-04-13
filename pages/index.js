@@ -18,6 +18,12 @@ export default function Home({posts}) {
   }, [posts])
 
   return (
+    <>
+    <Head>
+      <title>Brand. | Creative Showcase</title>
+      <meta name="description" content="A small media company established in 2022" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <motion.div 
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}
@@ -30,7 +36,7 @@ export default function Home({posts}) {
         <Footer />
       </div>
     </motion.div>
-    
+    </>
   )
 }
 
