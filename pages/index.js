@@ -18,7 +18,7 @@ export default function Home({posts}) {
   }, [posts])
 
   return (
-    <>
+    <div>
     <Head>
       <title>Brand. | Creative Showcase</title>
       <meta name="description" content="A small media company established in 2022" />
@@ -36,7 +36,7 @@ export default function Home({posts}) {
         <Footer />
       </div>
     </motion.div>
-    </>
+    </div>
   )
 }
 

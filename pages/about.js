@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function About() {
   return (
-    <>
+    <section>
       <Head>
         <title>Brand. | About Us</title>
         <meta name="description" content="A small media company established in 2022" />
@@ -35,7 +35,7 @@ function About() {
             <Footer />
         </div>
       </motion.div>
-    </>
+    </section>
   )
 }
 
