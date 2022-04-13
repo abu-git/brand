@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
