@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Head from 'next/head'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import PostsGridItem from '../../components/PostsGridItem'
@@ -11,23 +11,30 @@ import { motion } from 'framer-motion'
 
 function Posts({posts}) {
   return (
-    <motion.div 
-        exit={{ opacity : 0 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-    >
-    <div className='bg-white dark:bg-slate-900'>
-        <Navigation />
-        <section className='mt-8 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
-            <h2 className='mb-5 p-2 md:text-xl text-md font-semibold'>All Posts</h2>
-            {posts.data.map((post) => {
-                return<PostsGridItem post={post} key={post.id}/>
-            })}
-        </section>
-        <Footer />
+    <div>
+        <Head>
+      <title>Brand. | Articles</title>
+      <meta name="description" content="A small media company established in 2022" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+        <motion.div 
+            exit={{ opacity : 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+        >  
+            <div className='bg-white dark:bg-slate-900'>
+                <Navigation />
+                <section className='mt-8 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
+                    <h2 className='mb-5 p-2 md:text-xl text-md font-semibold'>All Posts</h2>
+                    {posts.data.map((post) => {
+                        return<PostsGridItem post={post} key={post.id}/>
+                    })}
+                </section>
+                <Footer />
+            </div>
+        </motion.div>
     </div>
-    </motion.div>
-  )
+    )
 }
 
 export default Posts

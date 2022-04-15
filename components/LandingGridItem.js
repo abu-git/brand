@@ -18,7 +18,7 @@ function LandingGridItem({post}) {
                         />
                         <h3 className='absolute brightness-100 font-bold text-3xl -mt-36 text-white px-5'>{post.attributes.title}</h3>
                     </div>
-                    <span className='text-sm lg:text-lg text-gray-700 dark:text-gray-100 mt-2 mb-2 text-justify px-3'>
+                    <span className='text-md lg:text-lg text-gray-700 dark:text-gray-100 mt-2 mb-2 text-justify px-3'>
                         {post.attributes.description}
                     </span>
                     <span className='flex justify-end'>

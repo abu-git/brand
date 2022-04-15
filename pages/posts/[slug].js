@@ -1,8 +1,10 @@
 import Image from "next/image"
+import Link from "next/link"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
 import axios from 'axios'
 import { motion } from 'framer-motion'
+import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 
 
 const Post = ({post}) => {
@@ -15,18 +17,25 @@ const Post = ({post}) => {
         >
             <div className='bg-white dark:bg-slate-900'>
                 <Navigation />
-                <section className="mt-5 mx-auto">
-                    <div>
-                        <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-5 px-8">{post.attributes.title}</h3>
+                <div className="flex items-center ml-6">
+                    <Link href="/posts">
+                    <span className="pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-fuchsia-600">
+                        <ArrowNarrowLeftIcon className="h-7 w-7" />
+                    </span>
+                    </Link>
+                </div>
+                <section className="flex flex-col mt-4 mx-auto">
+                        <div className="mx-8 lg:mx-16">
+                            <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-5 px-8">{post.attributes.title}</h3>
+                        </div>
                         <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 lg:mx-48 px-4 py-5 text-center">
                             <Image 
                                 src={`/${post.attributes.gridImage}`}
                                 width={300}
                                 height={300}
                             />
-                            <p className="text-2xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
+                            <p className="text-xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
                         </div>
-                    </div>
                     
                 </section>
                 <Footer />
@@ -37,9 +46,7 @@ const Post = ({post}) => {
 
 export async function getStaticProps({ params: {slug} }) {
     //const post_res = await axios.get(`http://localhost:1337/api/posts?filters[slug]=${slug}`)
-    //console.log(slug)
     const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
-    //console.log(post_res.data.data)
     
     return{
         props: {
@@ -52,7 +59,6 @@ export async function getStaticPaths() {
     //const posts_res = await axios.get("http://localhost:1337/api/posts")
     const posts_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
     const posts = posts_res.data
-    //console.log(posts.data)
 
     return {
         paths: posts.data.map(post => ({
