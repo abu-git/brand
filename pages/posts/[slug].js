@@ -17,8 +17,8 @@ const Post = ({post}) => {
                 <Navigation />
                 <section className="mt-5 mx-auto">
                     <div>
-                        <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-2 px-8">{post.attributes.title}</h3>
-                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 lg:mx-10 px-4 py-5 text-center">
+                        <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-5 px-8">{post.attributes.title}</h3>
+                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 lg:mx-48 px-4 py-5 text-center">
                             <Image 
                                 src={`/${post.attributes.gridImage}`}
                                 width={300}
