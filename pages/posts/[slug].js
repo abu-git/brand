@@ -2,29 +2,36 @@ import Image from "next/image"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
 import axios from 'axios'
+import { motion } from 'framer-motion'
 
 
 const Post = ({post}) => {
 
     return(
-        <div className='bg-white dark:bg-slate-900'>
-            <Navigation />
-            <section className="mt-5 mx-auto">
-                <div>
-                    <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-2 px-8">{post.attributes.title}</h3>
-                    <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 px-4 py-5 text-center">
-                        <Image 
-                            src={`/${post.attributes.gridImage}`}
-                            width={300}
-                            height={300}
-                        />
-                        <p className="text-2xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
+        <motion.div 
+        exit={{ opacity:0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        >
+            <div className='bg-white dark:bg-slate-900'>
+                <Navigation />
+                <section className="mt-5 mx-auto">
+                    <div>
+                        <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-2 px-8">{post.attributes.title}</h3>
+                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 lg:mx-10 px-4 py-5 text-center">
+                            <Image 
+                                src={`/${post.attributes.gridImage}`}
+                                width={300}
+                                height={300}
+                            />
+                            <p className="text-2xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
+                        </div>
                     </div>
-                </div>
-                
-            </section>
-            <Footer />
-        </div>
+                    
+                </section>
+                <Footer />
+            </div>
+        </motion.div>
     )
 }
 
