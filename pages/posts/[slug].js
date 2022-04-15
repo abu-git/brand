@@ -12,13 +12,13 @@ const Post = ({post}) => {
             <section className="mt-5 mx-auto">
                 <div>
                     <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-2 px-8">{post.attributes.title}</h3>
-                    <div className="bg-white dark:bg-slate-800 rounded drop-shadow-lg mx-4 px-4 py-5 text-center">
+                    <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 px-4 py-5 text-center">
                         <Image 
                             src={`/${post.attributes.gridImage}`}
                             width={300}
                             height={300}
                         />
-                        <p className="text-2xl lg:text-3xl text-justify">{post.attributes.firstWords}</p>
+                        <p className="text-2xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
                     </div>
                 </div>
                 
@@ -30,7 +30,9 @@ const Post = ({post}) => {
 
 export async function getStaticProps({ params: {slug} }) {
     //const post_res = await axios.get(`http://localhost:1337/api/posts?filters[slug]=${slug}`)
+    //console.log(slug)
     const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
+    //console.log(post_res.data.data)
     
     return{
         props: {
