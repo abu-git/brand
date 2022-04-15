@@ -4,7 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Open [Brand. | Homepage](http://brand-kappa.vercel.app/) with your browser to see the result.
 
-This is a githun repo of the frontend of this application and is successfully deployed on Heroku.
+This is a githun repo of the frontend of this application. It is deployed on Vercel. 
+
+The backend uses the headless CMS framework known as Strapi with a PostgreSQL database. It is deployed on Heroku.
 
 ## About 
 
