@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import Navigation from '../components/Navigation'
+import Navigation from '../components/Navigation2'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 

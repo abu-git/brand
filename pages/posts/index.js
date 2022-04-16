@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Navigation from '../../components/Navigation'
+import Navigation from '../../components/Navigation2'
 import Footer from '../../components/Footer'
 import PostsGridItem from '../../components/PostsGridItem'
 import axios from 'axios'

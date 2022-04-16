@@ -9,3 +9,7 @@
         font-family: Dosis;
     }
 }
+
+.active {
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-indigo-600 to-fuchsia-700;
+}
