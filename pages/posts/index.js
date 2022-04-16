@@ -13,10 +13,10 @@ function Posts({posts}) {
   return (
     <div>
         <Head>
-      <title>Brand. | Articles</title>
-      <meta name="description" content="A small media company established in 2022" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+            <title>Brand. | Articles</title>
+            <meta name="description" content="A small media company established in 2022" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <motion.div 
             exit={{ opacity : 0 }}
             initial={{ opacity: 0 }}

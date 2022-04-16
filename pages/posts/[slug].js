@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Head from "next/head"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
 import axios from 'axios'
@@ -10,6 +11,12 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 const Post = ({post}) => {
 
     return(
+        <div>
+            <Head>
+                <title>Brand. | {post.attributes.title}</title>
+                <meta name="description" content={post.attributes.description} />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
         <motion.div 
         exit={{ opacity:0 }}
         initial={{ opacity: 0 }}
@@ -41,6 +48,7 @@ const Post = ({post}) => {
                 <Footer />
             </div>
         </motion.div>
+        </div>
     )
 }
 
