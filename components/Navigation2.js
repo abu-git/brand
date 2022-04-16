@@ -59,7 +59,7 @@ function Navigation() {
         <nav className='flex justify-between'>
             {/* Logo  */}
             <Link href="/">
-                <a className='w-1/4 sm:text-lg md:text-xl font-bold px-3 bg-clip-text text-transparent bg-gradient-to-l from-indigo-600 to-fuchsia-700'>
+                <a className='w-1/4 sm:text-lg md:text-xl font-bold px-3 bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-green-800'>
                     Brand.
                 </a>
             </Link>
