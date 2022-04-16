@@ -26,7 +26,7 @@ const Post = ({post}) => {
                 <Navigation />
                 <div className="flex items-center ml-6">
                     <Link href="/posts">
-                    <span className="pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-fuchsia-600">
+                    <span className="pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-teal-700">
                         <ArrowNarrowLeftIcon className="h-7 w-7" />
                     </span>
                     </Link>
