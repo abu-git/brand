@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { useTheme } from "next-themes"
 
-import { MoonIcon, SunIcon } from "@heroicons/react/solid"
+import { MoonIcon, SunIcon } from "@heroicons/react/outline"
 
 
 
@@ -27,12 +27,12 @@ function Navigation() {
 
         if(currentTheme === 'dark'){
             return(
-                <SunIcon className="w-7 h-7 hover:fill-slate-300" role="button" onClick={() => setTheme('light')} />
+                <SunIcon className="w-7 h-7 hover:fill-yellow-500" role="button" onClick={() => setTheme('light')} />
             )
         }
         else {
             return(
-                <MoonIcon className="w-7 h-7 hover:fill-slate-700" role="button" onClick={() => setTheme('dark')} />
+                <MoonIcon className="w-7 h-7 hover:fill-teal-100" role="button" onClick={() => setTheme('dark')} />
             )
         }
     }

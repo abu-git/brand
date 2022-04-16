@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function About() {
   return (
-    <section>
+    <section className='bg-white dark:bg-slate-900'>
       <Head>
         <title>Brand. | About Us</title>
         <meta name="description" content="A small media company established in 2022" />
