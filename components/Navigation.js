@@ -49,7 +49,7 @@ function Navigation() {
     }
 
     return (
-    <div className='font-body py-4 px-8 rounded shadow-md dark:bg-slate-900 dark:text-gray-100'>
+    <div className='font-body py-4 px-8 rounded shadow-md dark:bg-slate-900 dark:text-gray-100 fixed top-0 z-10 w-full'>
         <nav className='flex justify-between'>
             {/* Logo  */}
             <Link href="/">
