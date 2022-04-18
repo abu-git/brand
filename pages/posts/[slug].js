@@ -31,11 +31,11 @@ const Post = ({post}) => {
                     </span>
                     </Link>
                 </div>
-                <section className="flex flex-col mt-4 mx-auto">
+                <section className="flex flex-col mt-2 mx-auto">
                         <div className="mx-8 lg:mx-16">
                             <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-5 px-8">{post.attributes.title}</h3>
                         </div>
-                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 lg:mx-48 px-4 py-5 text-center">
+                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 md:mx-24 lg:mx-48 px-4 py-5 text-center">
                             <Image 
                                 src={`/${post.attributes.gridImage}`}
                                 width={300}
