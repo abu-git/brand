@@ -25,7 +25,7 @@ const Post = ({post}) => {
             <div className='bg-white dark:bg-slate-900'>
                 <Navigation />
                 <div className="flex items-center ml-6">
-                    <Link href="/posts">
+                    <Link href="/posts" passHref>
                     <span className="pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-teal-700">
                         <ArrowNarrowLeftIcon className="h-7 w-7" />
                     </span>
@@ -40,6 +40,7 @@ const Post = ({post}) => {
                                 src={`/${post.attributes.gridImage}`}
                                 width={300}
                                 height={300}
+                                alt={post.attributes.title}
                             />
                             <p className="text-xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
                         </div>

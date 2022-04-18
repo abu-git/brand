@@ -8,7 +8,7 @@ function LandingHeader({post}) {
     */
 
     return (
-    <Link href={`/posts/${post.slug}`}>
+    <Link href={`/posts/${post.slug}`} passHref>
         <header className='w-full px-6 py-6'>
             <div className='flex justify-between bg-white rounded overflow-hidden shadow-lg hover:shadow-xl cursor-pointer dark:bg-slate-800 dark:text-gray-100'>
                 <div className="sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl lg:w-1/2 xl:w-1/2 2xl:w-9/12 font-extrabold flex items-center ...">

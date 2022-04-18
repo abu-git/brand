@@ -5,7 +5,7 @@ import Link from 'next/link'
 function PostsGridItem({post}) {
     //console.log(post.attributes)
     return (
-        <Link href={`/posts/${post.attributes.slug}`}>
+        <Link href={`/posts/${post.attributes.slug}`} passHref>
             <div className='flex bg-white dark:bg-slate-800 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-xl mb-4 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image

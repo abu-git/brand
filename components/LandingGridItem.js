@@ -5,7 +5,7 @@ import Link from 'next/link'
 function LandingGridItem({post}) {
     
     return (
-        <Link href={`/posts/${post.attributes.slug}`}>
+        <Link href={`/posts/${post.attributes.slug}`} passHref>
             <div className='flex flex-col cursor-pointer bg-white dark:bg-slate-800 dark:text-gray-100 rounded overflow-hidden drop-shadow-lg hover:drop-shadow-2xl'>
                     <div className='relative'>
                         <Image 
