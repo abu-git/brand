@@ -17,7 +17,7 @@ function About() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <div className='bg-white dark:bg-slate-900 lg:h-screen'>
+        <div className='bg-white dark:bg-slate-900'>
             <Navigation />
             <section className='bg-white dark:bg-slate-900 md:mx-20 lg:mx-48 mt-14 px-6 grid grid-cols-1 md:grid-cols-2 '>
                 {/*--- Left Div on big screens Top Div on small screens ---*/}
