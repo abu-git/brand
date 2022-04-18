@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation2'
 import LandingHeader from '../components/LandingHeader'
 import LandingGrid from '../components/LandingGrid'
 import Footer from '../components/Footer'
+import Playlists from '../components/Playlists'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
@@ -33,6 +34,7 @@ export default function Home({posts}) {
         <Navigation />
         <LandingHeader post={posts.data[0].attributes} />{/* -----------> Header post is chosen directly using its id */}
         <LandingGrid posts={gridPosts} />
+        <Playlists />
         <Footer />
       </div>
     </motion.div>
