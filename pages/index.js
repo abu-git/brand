@@ -32,7 +32,7 @@ export default function Home({posts}) {
     >
       <div className='bg-white dark:bg-slate-900'>
         <Navigation />
-        <LandingHeader post={posts.data[0].attributes} />{/* -----------> Header post is chosen directly using its id */}
+        <LandingHeader post={posts.data[5].attributes} />{/* -----------> Header post is chosen directly using its id */}
         <LandingGrid posts={gridPosts} />
         <Playlists />
         <Footer />
