@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Footer() {
   return (
     <div className='bg-white dark:bg-slate-900'>
     <footer className="grid md:grid-cols-2 grid-cols-1 mt-12 mb-8 px-6 h-40 bg-white dark:bg-slate-900">
         <div className='flex items-center justify-center'>
-            <h3 className='font-bold text-xl'><span>Brand.</span>
+            <h3 className='font-bold text-xl flex items-center'>
+                    <span>Kulture Launders</span>
             </h3>
         </div>
         <div className='flex items-center justify-center'>
@@ -27,7 +29,7 @@ function Footer() {
     </footer>
     <div className='flex justify-center'>
         <h4 className='text-md font-light pb-5'>
-            ©2022 Design by <Link href="http://samcv.herokuapp.com" passHref><span className='bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-teal-800 cursor-pointer'>Samuel Abu</span></Link>
+            ©2022 Design by <a href="http://samcv.herokuapp.com"><span className='bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-teal-800 cursor-pointer'>Samuel Abu</span></a>
         </h4>
     </div>
     </div>

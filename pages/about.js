@@ -26,7 +26,7 @@ function About() {
                 </div>
                 {/*--- Right Div on big screens Bottom Div on small screens ---*/}
                 <div className='bg-white dark:bg-slate-800 rounded drop-shadow-lg mt-4 px-3 py-5 items-center '>
-                    <h4 className='text-2xl font-light'><span className='text-3xl font-semibold'>Brand.</span> is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child.</h4>
+                    <h4 className='text-2xl font-light'><span className='text-3xl font-semibold'>Kulture Launders</span> is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child.</h4>
                     <br />
 
                     <h4 className='text-2xl font-light'>Hopefully, we can give voice to the unheard and inspire the young one. Stay with us on this journey.</h4>
