@@ -13,7 +13,7 @@ const Post = ({post}) => {
     return(
         <div>
             <Head>
-                <title>Brand. | {post.attributes.title}</title>
+                <title>Kulture Launders | {post.attributes.title}</title>
                 <meta name="description" content={post.attributes.description} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

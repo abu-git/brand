@@ -21,7 +21,7 @@ export default function Home({posts}) {
   return (
     <div>
     <Head>
-      <title>Brand. | Creative Showcase</title>
+      <title>Kulture Launders | Creative Showcase</title>
       <meta name="description" content="A small media company established in 2022" />
       <link rel="icon" href="/favicon.ico" />
     </Head>

@@ -13,7 +13,7 @@ function Posts({posts}) {
   return (
     <div>
         <Head>
-            <title>Brand. | Articles</title>
+            <title>Kulture Launders | Articles</title>
             <meta name="description" content="A small media company established in 2022" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
