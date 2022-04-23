@@ -33,7 +33,7 @@ const Post = ({post}) => {
                 </div>
                 <section className="flex flex-col mt-2 mx-auto">
                         <div className="mx-8 lg:mx-16">
-                            <h3 className="text-2xl lg:text-5xl font-extrabold text-center mb-5 px-8">{post.attributes.title}</h3>
+                            <h3 className="text-2xl lg:text-5xl font-extrabold text-black dark:text-white text-center mb-5 px-8">{post.attributes.title}</h3>
                         </div>
                         <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 md:mx-24 lg:mx-48 px-4 py-5 text-center">
                             <Image 
@@ -42,7 +42,7 @@ const Post = ({post}) => {
                                 height={300}
                                 alt={post.attributes.title}
                             />
-                            <p className="text-xl lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
+                            <p className="text-xl text-black dark:text-white lg:text-3xl text-justify pt-3">{post.attributes.firstWords}</p>
                         </div>
                     
                 </section>

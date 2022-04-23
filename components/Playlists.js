@@ -9,7 +9,7 @@ function Playlists() {
 
         {/* --------------------SPOTIFY PLAYLISTS EMBED ----------------------------------- */}
         <div className='m-4 text-center md:text-right'>
-            <h3 className='text-xl md:text-2xl font-light px-6 py-3'>Spotify Playlists {'>>>'}</h3>
+            <h3 className='text-xl text-black dark:text-white md:text-2xl font-light px-6 py-3'>Spotify Playlists {'>>>'}</h3>
         </div>
         <section className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 justify-items-center'>
             <div className='bg-white dark:bg-slate-800 px-3 py-5 rounded drop-shadow-lg'>
