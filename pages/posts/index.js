@@ -25,7 +25,7 @@ function Posts({posts}) {
             <div className='bg-white dark:bg-slate-900'>
                 <Navigation />
                 <section className='mt-14 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
-                    <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold'>All Posts</h2>
+                    <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Posts</h2>
                     {posts.data.map((post) => {
                         return<PostsGridItem post={post} key={post.id}/>
                     })}
