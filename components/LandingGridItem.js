@@ -6,7 +6,7 @@ function LandingGridItem({post}) {
     
     return (
         <Link href={`/posts/${post.attributes.slug}`} passHref>
-            <div className='flex flex-col cursor-pointer bg-white rounded drop-shadow-lg overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-2xl dark:bg-slate-800 dark:text-gray-100'>
+            <div className='flex flex-col cursor-pointer bg-white rounded drop-shadow-lg overflow-hidden md:rounded md:drop-shadow-md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        hover:drop-shadow-2xl dark:bg-slate-800 dark:text-gray-100'>
                     <div className='relative'>
                         <Image 
                             width={433}
@@ -37,4 +37,4 @@ function LandingGridItem({post}) {
     )
 }
 
-export default LandingGridItem
+export default LandingGridItem                                                                                                                                                                                                                                                                                                                                 

@@ -7,7 +7,7 @@ function Footer() {
     <footer className="grid md:grid-cols-2 grid-cols-1 mt-12 mb-8 px-6 h-40 bg-white dark:bg-slate-900">
         <div className='flex items-center justify-center'>
             <h3 className='font-bold text-black dark:text-white text-xl flex items-center'>
-                    <span>Kulture Launders</span>
+                    <span>tunesketch</span>
             </h3>
         </div>
         <div className='flex items-center justify-center'>
