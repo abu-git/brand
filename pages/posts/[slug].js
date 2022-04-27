@@ -23,18 +23,18 @@ const Post = ({post}) => {
                 {/* Social media meta tags */}
                 <meta property="og:url" content="https://www.tunesketch.com" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content={post.attributes.title} />
-                <meta property="og:description" content={post.attributes.description} />
-                <meta property="og:image" content="/meta.jpg" />
+                <meta property="og:title" content={post.attributes.title} key={`ogtitle` + post.attributes.title} />
+                <meta property="og:description" content={post.attributes.description} key={`ogdesc` + post.attributes.description}  />
+                <meta property="og:image" content="/meta.jpg" key={`ogimg` + post.attributes.title} />
 
                 <meta name="twitter:card" content="summary_large_image"/>
                 <meta name="twitter:creator" content="@reachmhp"/>
                 <meta name="twitter:creator" content="@reachmhp" />
                 <meta property="twitter:domain" content="tunesketch.com"/>
                 <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-                <meta name="twitter:title" content={post.attributes.title}  />
-                <meta name="twitter:description" content={post.attributes.description}  />
-                <meta name="twitter:image" content="/meta.jpg"/>
+                <meta name="twitter:title" content={post.attributes.title} key={`twtitle` + post.attributes.title}  />
+                <meta name="twitter:description" content={post.attributes.description} key={`twdesc` + post.attributes.description}  />
+                <meta name="twitter:image" content="/meta.jpg" key={`twimg` + post.attributes.title}/>
             </Head>
         <motion.div 
         exit={{ opacity:0 }}
