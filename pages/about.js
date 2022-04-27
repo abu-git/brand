@@ -10,7 +10,26 @@ function About() {
       <Head>
         <title>tunesketch | About Us</title>
         <meta name="description" content="A small media company established in 2022" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+        {/*<link rel="manifest" href="/favicon/favicon/site.webmanifest"/>*/}
+
+        {/* Social media meta tags */}
+        <meta property="og:url" content="https://tunesketch.com" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal." />
+        <meta property="og:description" content="tunesketch | We are a group of African creatives in different places in the world with a common goal. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child." />
+        <meta property="og:image" content="/meta.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:creator" content="@reachmhp"/>
+        <meta name="twitter:creator" content="@reachmhp" />
+        <meta property="twitter:domain" content="tunesketch.com"/>
+        <meta property="twitter:url" content="https://www.tunesketch.com/"/>
+        <meta name="twitter:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal"  />
+        <meta name="twitter:description" content="tunesketch | We are a group of African creatives in different places in the world with a common goal. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child."  />
+        <meta name="twitter:image" content="/meta.jpg"/>
       </Head>
       <motion.div 
         exit={{ opacity:0 }}
@@ -26,7 +45,7 @@ function About() {
                 </div>
                 {/*--- Right Div on big screens Bottom Div on small screens ---*/}
                 <div className='bg-white dark:bg-slate-800 rounded drop-shadow-lg mt-4 px-3 py-5 items-center '>
-                    <h4 className='text-2xl font-light text-black dark:text-white'><span className='text-3xl font-semibold'>tunesketch</span> is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child.</h4>
+                    <h4 className='text-2xl font-light text-black dark:text-white'><span className='text-3xl font-semibold'>tunesketch</span> is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child.</h4>
                     <br />
 
                     <h4 className='text-2xl font-light'>Hopefully, we can give voice to the unheard and inspire the young one. Stay with us on this journey.</h4>

@@ -15,7 +15,26 @@ const Post = ({post}) => {
             <Head>
                 <title>tunesketch | {post.attributes.title}</title>
                 <meta name="description" content={post.attributes.description} />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+                {/*<link rel="manifest" href="/favicon/favicon/site.webmanifest"/>*/}
+
+                {/* Social media meta tags */}
+                <meta property="og:url" content="https://tunesketch.com" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={post.attributes.title} />
+                <meta property="og:description" content={post.attributes.description} />
+                <meta property="og:image" content="/meta.jpg" />
+
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:creator" content="@reachmhp"/>
+                <meta name="twitter:creator" content="@reachmhp" />
+                <meta property="twitter:domain" content="tunesketch.com"/>
+                <meta property="twitter:url" content="https://www.tunesketch.com/"/>
+                <meta name="twitter:title" content={post.attributes.title}  />
+                <meta name="twitter:description" content={post.attributes.description}  />
+                <meta name="twitter:image" content="/meta.jpg"/>
             </Head>
         <motion.div 
         exit={{ opacity:0 }}

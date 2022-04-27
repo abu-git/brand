@@ -65,10 +65,10 @@ function Navigation() {
                 </a>*/}
                 <div className='flex items-center w-1/2 md:w-1/4 cursor-pointer'>
                     <Image
-                        src='/logo_1.png'
+                        src='/favicon/favicon-32x32.png'
                         width={35}
                         height={35}
-                        alt='Africa Interacts Logo'
+                        alt='tunesketch logo'
                     />
                     <h3 className='sm:text-md md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-green-800 pl-1'>tunesketch</h3>
                 </div>
