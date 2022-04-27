@@ -28,7 +28,7 @@ export default function Home({posts}) {
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-      {/* Social media meta tags */}
+      {/* Social media meta tags 
       <meta property="og:url" content="https://www.tunesketch.com" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
@@ -40,7 +40,14 @@ export default function Home({posts}) {
       <meta property="twitter:url" content="https://www.tunesketch.com/"/>
       <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"/>
       <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
-      <meta name="twitter:image" content='/meta.jpg' key="timg" />
+      <meta name="twitter:image" content='/meta.jpg' key="timg" />*/}
+
+      <meta property='og:url' content='https://www.tunesketch.com' />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
+      <meta property="twitter:card" content="summary_large_image"/>
+      <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
+      <meta property="og:image" content="/meta.jpg" key="ogimg" />
     </Head>
     <motion.div 
       exit={{ opacity: 0 }}
