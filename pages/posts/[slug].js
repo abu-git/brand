@@ -21,8 +21,8 @@ const Post = ({post}) => {
                 {/*<link rel="manifest" href="/favicon/favicon/site.webmanifest"/>*/}
 
                 {/* Social media meta tags */}
-                <meta property="og:url" content="https://tunesketch.com" />
-                <meta property="og:type" content="article" />
+                <meta property="og:url" content="https://www.tunesketch.com" />
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content={post.attributes.title} />
                 <meta property="og:description" content={post.attributes.description} />
                 <meta property="og:image" content="/meta.jpg" />
