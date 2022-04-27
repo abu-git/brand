@@ -23,7 +23,7 @@ function Posts({posts}) {
             {/* Social media meta tags */}
             <meta property="og:url" content="https://tunesketch.com" />
             <meta property="og:type" content="article" />
-            <meta property="og:title" content="tunesketch | These are our short articles and reviews of some dope african music" />
+            <meta property="og:title" content="These are our short articles and reviews of some dope african music" />
             <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." />
             <meta property="og:image" content="/meta.jpg" />
 
@@ -32,7 +32,7 @@ function Posts({posts}) {
             <meta name="twitter:creator" content="@reachmhp" />
             <meta property="twitter:domain" content="tunesketch.com"/>
             <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-            <meta name="twitter:title" content="tunesketch | These are our short articles and reviews of some dope african music" />
+            <meta name="twitter:title" content="These are our short articles and reviews of some dope african music" />
             <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art."  />
             <meta name="twitter:image" content="/meta.jpg"/>
 

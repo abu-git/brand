@@ -29,7 +29,7 @@ export default function Home({posts}) {
       {/* Social media meta tags */}
       <meta property="og:url" content="https://tunesketch.com" />
       <meta property="og:type" content="article" />
-      <meta property="og:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community." />
+      <meta property="og:title" content="We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community." />
       <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." />
       <meta property="og:image" content="/meta.jpg" />
 
@@ -38,7 +38,7 @@ export default function Home({posts}) {
       <meta name="twitter:creator" content="@reachmhp" />
       <meta property="twitter:domain" content="tunesketch.com"/>
       <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-      <meta name="twitter:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community." />
+      <meta name="twitter:title" content="We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community." />
       <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art."  />
       <meta name="twitter:image" content="/meta.jpg"/>
     </Head>
