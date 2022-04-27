@@ -35,7 +35,7 @@ export default function Home({posts}) {
       <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
       <meta property="og:image" content="/meta.jpg" key="ogimg" />
 
-      <meta property="twitter:card" content="summary"/>
+      <meta property="twitter:card" content="summary_large_image"/>
       <meta property="twitter:domain" content="tunesketch.com"/>
       <meta property="twitter:url" content="https://www.tunesketch.com/"/>
       <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"/>

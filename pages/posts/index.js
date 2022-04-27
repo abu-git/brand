@@ -22,19 +22,19 @@ function Posts({posts}) {
 
             {/* Social media meta tags */}
             <meta property="og:url" content="https://tunesketch.com" />
-            <meta property="og:type" content="article" />
-            <meta property="og:title" content="These are our short articles and reviews of some dope african music" />
-            <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." />
-            <meta property="og:image" content="/meta.jpg" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="These are our short articles and reviews of some dope african music" key="ogpoststitle" />
+            <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogpostsdesc" />
+            <meta property="og:image" content="/meta.jpg" key="ogpostsimg" />
 
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:creator" content="@reachmhp"/>
             <meta name="twitter:creator" content="@reachmhp" />
             <meta property="twitter:domain" content="tunesketch.com"/>
             <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-            <meta name="twitter:title" content="These are our short articles and reviews of some dope african music" />
-            <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art."  />
-            <meta name="twitter:image" content="/meta.jpg"/>
+            <meta name="twitter:title" content="These are our short articles and reviews of some dope african music" key="twpoststitle" />
+            <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art." key="twpostsdesc"  />
+            <meta name="twitter:image" content="/meta.jpg" key="twpostsimg"/>
 
         </Head>
         <motion.div 
