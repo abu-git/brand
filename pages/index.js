@@ -20,54 +20,54 @@ export default function Home({posts}) {
 
   return (
     <div>
-    <Head>
-      <title>tunesketch | Creative Showcase</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="description" content="A small media company established in 2022" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-      {/* Social media meta tags 
-      <meta property="og:url" content="https://www.tunesketch.com" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
-      <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
-      <meta property="og:image" content="/meta.jpg" key="ogimg" />
+      <Head>
+        <title>tunesketch | Creative Showcase</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="A small media company established in 2022" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+        {/* Social media meta tags 
+        <meta property="og:url" content="https://www.tunesketch.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
+        <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
+        <meta property="og:image" content="/meta.jpg" key="ogimg" />
 
-      <meta property="twitter:card" content="summary_large_image"/>
-      <meta property="twitter:domain" content="tunesketch.com"/>
-      <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-      <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"/>
-      <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
-      <meta name="twitter:image" content='/meta.jpg' key="timg" />*/}
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:domain" content="tunesketch.com"/>
+        <meta property="twitter:url" content="https://www.tunesketch.com/"/>
+        <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"/>
+        <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
+        <meta name="twitter:image" content='/meta.jpg' key="timg" />*/}
 
-      <meta property='og:url' content='https://www.tunesketch.com' />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
-      <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
-      <meta property="og:image" content="/meta.jpg" key="ogimg" />
+        <meta property='og:url' content='https://www.tunesketch.com' />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
+        <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
+        <meta property="og:image" content="/meta.jpg" key="ogimg" ></meta>
 
-      <meta name="twitter:card" content="summary_large_image" key="tcard"></meta>
-      <meta property="twitter:domain" content="tunesketch.com"/>
-      <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-      <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"/>
-      <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
-      <meta name="twitter:image" content="/meta.jpg" key="timg" />
-    </Head>
-    <motion.div 
-      exit={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
-      <div className='bg-white dark:bg-slate-900'>
-        <Navigation />
-        <LandingHeader post={posts.data[5].attributes} />{/* -----------> Header post is chosen directly using its id */}
-        <LandingGrid posts={gridPosts} />
-        <Playlists />
-        <Footer />
-      </div>
-    </motion.div>
+        <meta name="twitter:card" content="summary_large_image" key="tcard"></meta>
+        <meta property="twitter:domain" content="tunesketch.com"/>
+        <meta property="twitter:url" content="https://www.tunesketch.com/"/>
+        <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"></meta>
+        <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
+        <meta name="twitter:image" content="/meta.jpg" key="timg" ></meta>
+      </Head>
+      <motion.div 
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <div className='bg-white dark:bg-slate-900'>
+          <Navigation />
+          <LandingHeader post={posts.data[5].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          <LandingGrid posts={gridPosts} />
+          <Playlists />
+          <Footer />
+        </div>
+      </motion.div>
     </div>
   )
 }
