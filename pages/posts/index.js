@@ -27,7 +27,7 @@ function Posts({posts}) {
             <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogpostsdesc" />
             <meta property="og:image" content="/meta.jpg" key="ogpostsimg" />
 
-            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:card" content="summary_large_image" key="twcard"/>
             <meta name="twitter:creator" content="@reachmhp"/>
             <meta name="twitter:creator" content="@reachmhp" />
             <meta property="twitter:domain" content="tunesketch.com"/>

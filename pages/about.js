@@ -22,7 +22,7 @@ function About() {
         <meta property="og:description" content="tunesketch | We are a group of African creatives in different places in the world with a common goal. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child." key="ogaboutdesc" />
         <meta property="og:image" content="/meta.jpg" key="ogaboutimg" />
 
-        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:card" content="summary_large_image" key="twaboutcard"/>
         <meta name="twitter:creator" content="@reachmhp"/>
         <meta name="twitter:creator" content="@reachmhp" />
         <meta property="twitter:domain" content="tunesketch.com"/>

@@ -27,7 +27,7 @@ const Post = ({post}) => {
                 <meta property="og:description" content={post.attributes.description} key={`ogdesc` + post.attributes.description}  />
                 <meta property="og:image" content="/meta.jpg" key={`ogimg` + post.attributes.title} />
 
-                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:card" content="summary_large_image" key={`tcard` + post.attributes.title}/>
                 <meta name="twitter:creator" content="@reachmhp"/>
                 <meta name="twitter:creator" content="@reachmhp" />
                 <meta property="twitter:domain" content="tunesketch.com"/>
