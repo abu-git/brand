@@ -59,7 +59,7 @@ function Navigation() {
     <div className='font-body py-4 px-8 rounded shadow-md bg-white dark:bg-slate-900 dark:text-gray-100 fixed top-0 z-10 w-full'>
         <nav className='flex justify-between items-center'>
             {/* Logo  */}
-            <Link href="/">
+            <Link href="/" passHref>
                 {/*<a className='w-1/3 md:w-1/4 sm:text-lg md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-green-800'>
                     Brand.
                 </a>*/}

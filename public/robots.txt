@@ -1,7 +1,9 @@
-//robots.txt
-
-# Block all crawlers for /accounts
+# *
 User-agent: *
-Disallow: 
+Allow: /
 
+# Host
+Host: https://example.com
 
+# Sitemaps
+Sitemap: https://example.com/sitemap.xml

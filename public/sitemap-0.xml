@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://example.com</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/about</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts/timi-kei-delivers-a-stellar-oratory-performance-on-the-purpose-ep</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts/da-09-session-by-rapsom</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts/i-no-get-anything-for-mind-by-being-j-ice-and-bionic-the-soul-king-1</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts/a-travel-guide-for-the-broken-by-synik</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts/africore-by-holstar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+<url><loc>https://example.com/posts/peace-god-ep-by-daboomsha-and-stoute-louis</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-29T11:22:19.265Z</lastmod></url>
+</urlset>
