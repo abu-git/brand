@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 
 
+
 const Post = ({post}) => {
 
     return(
@@ -94,6 +95,7 @@ const Post = ({post}) => {
     )
 }
 
+/*
 export async function getStaticProps({ params: {slug} }) {
     //const post_res = await axios.get(`http://localhost:1337/api/posts?filters[slug]=${slug}`)
     const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
@@ -117,6 +119,17 @@ export async function getStaticPaths() {
         fallback: false
     }
 }
+*/
 
+export async function getServerSideProps({ params: {slug} }){
+    //const { params, req, res } = context
+    const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
+
+    return {
+        props: {
+            post: post_res.data.data[0]
+        }
+    }
+}
 
 export default Post

@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 
-export default function Home({posts}) {
+export default function Home({posts, title, description, image, twcard, url, domain, type }) {
   //retreive main header grid data
   //console.log(posts.data)
   const [gridPosts, setGridPosts] = useState([])
@@ -42,19 +42,20 @@ export default function Home({posts}) {
         <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
         <meta name="twitter:image" content='/meta.jpg' key="timg" />*/}
 
-        <meta property='og:url' content='https://www.tunesketch.com' />
-        <meta property='og:type' content='website' />
-        <meta property='og:title' content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
-        <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
-        <meta property='og:image' content='meta.jpg' key="ogimg" ></meta>
+        <meta property='og:url' content={url} />
+        <meta property='og:type' content={type} />
+        <meta property='og:title' content={title} />
+        <meta property="og:description" content={description} key="ogdesc" />
+        <meta property='og:image' content={image} key="ogimg" ></meta>
 
-        <meta name="twitter:card" content="summary_large_image" key="tcard"></meta>
-        <meta property="twitter:domain" content="tunesketch.com"/>
-        <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-        <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"></meta>
-        <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
-        <meta name="twitter:image" content="meta.jpg" key="timg" ></meta>
+        <meta name="twitter:card" content={twcard} key="tcard"></meta>
+        <meta property="twitter:domain" content={domain} />
+        <meta property="twitter:url" content={url} />
+        <meta name="twitter:title" content={title} key="ttitle"></meta>
+        <meta name="twitter:description" content={description} key='tdesc'  />
+        <meta name="twitter:image" content={image} key="timg" ></meta>
       </Head>
+      
       <motion.div 
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}
@@ -72,7 +73,7 @@ export default function Home({posts}) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   //const postsResponse = await axios.get("http://localhost:1337/api/posts") //<---- for local machine
   const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`).then().catch(err => console.log(err))
   //console.log("data array",postsResponse.data)
@@ -81,6 +82,13 @@ export async function getStaticProps() {
   return {
     props: {
       posts: postsResponse.data,
+      title: 'We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community',
+      description: 'tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art.',
+      image: '/meta.jpg',
+      twcard: 'summary_large_image',
+      url: 'https://www.tunesketch.com',
+      domain: 'tunesketch.com',
+      type: 'website'
     },
   }
 }
