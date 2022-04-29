@@ -2,7 +2,7 @@
 //import { promises as fsPromises } from 'fs'
 
 module.exports = {
-    siteUrl: 'https://example.com',
+    siteUrl: 'https://tunesketch.com',
     generateRobotsTxt: true, // (optional)
     // ...other options
   }
