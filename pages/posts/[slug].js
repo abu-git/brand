@@ -114,7 +114,7 @@ export async function getStaticPaths() {
         paths: posts.data.map(post => ({
             params: { slug: String(post.attributes.slug) }
         })),
-        fallback: false
+        fallback: true
     }
 }
 
