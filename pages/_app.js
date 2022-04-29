@@ -1,16 +1,10 @@
 import '../styles/globals.css'
-//import { ThemeProvider } from 'next-themes'
-//import { AnimatePresence } from 'framer-motion'
+import { ThemeProvider } from 'next-themes'
+import { AnimatePresence } from 'framer-motion'
+
+
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Component {...pageProps} />
-  )
-}
-
-export default MyApp
-
-/*function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence exitBeforeEnter>
       <ThemeProvider enableSystem={true} attribute="class">
@@ -20,4 +14,4 @@ export default MyApp
   )
 }
 
-export default MyApp*/
+export default MyApp
