@@ -21,7 +21,7 @@ const Post = ({post, ogImageUrl}) => {
                 
 
                 {/* Social media meta tags */}
-                <meta property="og:url" content="https://www.tunesketch.com" />
+                
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={post.attributes.title}  />
                 <meta property="og:description" content={post.attributes.description}  />
@@ -34,7 +34,7 @@ const Post = ({post, ogImageUrl}) => {
                 <meta name="twitter:creator" content="@reachmhp"/>
                 <meta name="twitter:creator" content="@reachmhp" />
                 <meta property="twitter:domain" content="tunesketch.com"/>
-                <meta property="twitter:url" content="https://www.tunesketch.com/"/>
+                
                 <meta name="twitter:title" content={post.attributes.title}   />
                 <meta name="twitter:description" content={post.attributes.description}  />
                 <meta name="twitter:image" content={ogImageUrl} />
