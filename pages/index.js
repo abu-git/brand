@@ -25,16 +25,21 @@ export default function Home({posts, metaPost, ogImageUrl }) {
     <Layout>
       <Head>
         <title>tunesketch | Creative Showcase</title>
-        <meta name="description" content={metaPost.attributes.description} />
-        <meta property='og:title' content={metaPost.attributes.title} />
+        <meta name="description" content='tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art.' />
+        <meta property='og:title' content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community'/>
+        <meta property="og:description" content='tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art.' />
         <meta property='og:image' content={ogImageUrl} />
         <meta property='og:image:secure_url' content={ogImageUrl} />
         <meta property='og:image:width' content="1012" />
         <meta property='og:image:height' content="506" />
+        <meta property="og:url" content="https://www.tunesketch.com" />
+        <meta property="og:type" content="website" />
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:title' content={metaPost.attributes.title} />
         <meta property='twitter:image' content={ogImageUrl} />
+        <meta name="twitter:creator" content="@reachmhp"/>
+        <meta name="twitter:creator" content="@reachmhp" />
       </Head>
       
       <motion.div 
