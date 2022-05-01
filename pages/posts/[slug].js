@@ -130,7 +130,7 @@ export async function getServerSideProps({ params: {slug} }){
         cloud_name: 'dbqn6vejg'
     })
 
-    const cloudinaryUrl = cloudinary.url('card-background_vnpcgp', {
+    const cloudinaryUrl = cloudinary.url('slugMetaBackground_qdxgix', {
         width: 1012,
         height: 506,
         transformation: [
