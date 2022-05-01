@@ -36,7 +36,7 @@ export default function Home({posts, metaPost, ogImageUrl }) {
         <meta property="og:type" content="website" />
 
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:title' content={metaPost.attributes.title} />
+        <meta property='twitter:title' content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' />
         <meta property='twitter:image' content={ogImageUrl} />
         <meta name="twitter:creator" content="@reachmhp"/>
         <meta name="twitter:creator" content="@reachmhp" />
