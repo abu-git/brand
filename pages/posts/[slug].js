@@ -26,6 +26,9 @@ const Post = ({post, ogImageUrl}) => {
                 <meta property="og:title" content={post.attributes.title}  />
                 <meta property="og:description" content={post.attributes.description}  />
                 <meta property="og:image" content={ogImageUrl}  />
+                <meta property="og:image:secure_url" content={ogImageUrl} />
+                <meta property="og:image:width" content="2024" />
+                <meta property="og:image:height" content="1012" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:creator" content="@reachmhp"/>
