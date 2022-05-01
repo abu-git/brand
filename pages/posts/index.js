@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Layout from '../../components/Layout'
 import Navigation from '../../components/Navigation2'
 import Footer from '../../components/Footer'
 import PostsGridItem from '../../components/PostsGridItem'
@@ -11,14 +12,11 @@ import { motion } from 'framer-motion'
 
 function Posts({posts}) {
   return (
-    <div>
+    <Layout>
         <Head>
             <title>tunesketch | Articles</title>
-            <meta name="description" content="A small media company established in 2022" />
-            <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-            {/*<link rel="manifest" href="/favicon/favicon/site.webmanifest"/>*/}
+            
+
 
             {/* Social media meta tags */}
             <meta property="og:url" content="https://tunesketch.com" />
@@ -53,7 +51,7 @@ function Posts({posts}) {
                 <Footer />
             </div>
         </motion.div>
-    </div>
+    </Layout>
     )
 }
 

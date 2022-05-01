@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { v2 as cloudinary } from 'cloudinary'
 import axios from 'axios'
 import Navigation from '../components/Navigation2'
 import LandingHeader from '../components/LandingHeader'
@@ -8,8 +9,10 @@ import Playlists from '../components/Playlists'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+import Layout from '../components/Layout'
 
-export default function Home({posts, title, description, image, twcard, url, domain, type }) {
+
+export default function Home({posts, metaPost, ogImageUrl }) {
   //retreive main header grid data
   //console.log(posts.data)
   const [gridPosts, setGridPosts] = useState([])
@@ -19,41 +22,18 @@ export default function Home({posts, title, description, image, twcard, url, dom
   }, [posts])
 
   return (
-    <div>
+    <Layout>
       <Head>
         <title>tunesketch | Creative Showcase</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="A small media company established in 2022" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-        {/* Social media meta tags 
-        <meta property="og:url" content="https://www.tunesketch.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' key='ogtitle' />
-        <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogdesc" />
-        <meta property="og:image" content="/meta.jpg" key="ogimg" />
-
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:domain" content="tunesketch.com"/>
-        <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-        <meta name="twitter:title" content="We are a group of African creatives in different places in the world." key="ttitle"/>
-        <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives." key='tdesc'  />
-        <meta name="twitter:image" content='/meta.jpg' key="timg" />*/}
-
-        <meta property='og:url' content={url} />
-        <meta property='og:type' content={type} />
-        <meta property='og:title' content={title} />
-        <meta property="og:description" content={description} key="ogdesc" />
-        <meta property='og:image' content={image} key="ogimg" ></meta>
-
-        <meta name="twitter:card" content={twcard} key="tcard"></meta>
-        <meta property="twitter:domain" content={domain} />
-        <meta property="twitter:url" content={url} />
-        <meta name="twitter:title" content={title} key="ttitle"></meta>
-        <meta name="twitter:description" content={description} key='tdesc'  />
-        <meta name="twitter:image" content={image} key="timg" ></meta>
+        <meta name="description" content={metaPost.attributes.description} />
+        <meta property='og:title' content={metaPost.attributes.title} />
+        <meta property='og:image' content={ogImageUrl} />
+        <meta property='og:image:secure_url' content={ogImageUrl} />
+        <meta property='og:image:width' content="1012" />
+        <meta property='og:image:height' content="506" />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:title' content={metaPost.attributes.title} />
+        <meta property='twitter:image' content={ogImageUrl} />
       </Head>
       
       <motion.div 
@@ -69,7 +49,7 @@ export default function Home({posts, title, description, image, twcard, url, dom
           <Footer />
         </div>
       </motion.div>
-    </div>
+    </Layout>
   )
 }
 
@@ -78,17 +58,39 @@ export async function getServerSideProps() {
   const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`).then().catch(err => console.log(err))
   //console.log("data array",postsResponse.data)
 
+  cloudinary.config({
+    cloud_name: 'dbqn6vejg'
+  })
+
+  const cloudinaryUrl = cloudinary.url('card-background_vnpcgp', {
+    width: 1012,
+    height: 506,
+    transformation: [
+      {
+        fetch_format: 'auto',
+        quality: 'auto'
+      },
+      {
+        overlay: {
+          url: 'https://res.cloudinary.com/dbqn6vejg/image/upload/v1651411247/synik_mydpzl.jpg'
+        }
+      },
+      {
+        flags: 'layer_apply',
+        width: 426,
+        height: 426,
+        gravity: 'north_west',
+        x: 325,
+        y: 42
+      }
+    ]
+  })
 
   return {
     props: {
       posts: postsResponse.data,
-      title: 'We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community',
-      description: 'tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art.',
-      image: '/meta.jpg',
-      twcard: 'summary_large_image',
-      url: 'https://www.tunesketch.com',
-      domain: 'tunesketch.com',
-      type: 'website'
+      metaPost: postsResponse.data.data[5],
+      ogImageUrl: cloudinaryUrl,
     },
   }
 }

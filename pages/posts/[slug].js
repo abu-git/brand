@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Head from "next/head"
+import Layout from "../../components/Layout"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
 import axios from 'axios'
@@ -12,14 +13,11 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 const Post = ({post}) => {
 
     return(
-        <div>
+        <Layout>
             <Head>
                 <title>tunesketch | {post.attributes.title}</title>
                 <meta name="description" content={post.attributes.description} />
-                <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
-                {/*<link rel="manifest" href="/favicon/favicon/site.webmanifest"/>*/}
+                
 
                 {/* Social media meta tags */}
                 <meta property="og:url" content="https://www.tunesketch.com" />
@@ -91,7 +89,7 @@ const Post = ({post}) => {
                 <Footer />
             </div>
         </motion.div>
-        </div>
+        </Layout>
     )
 }
 
