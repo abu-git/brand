@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Head from "next/head"
+import { v2 as cloudinary } from 'cloudinary'
 import Layout from "../../components/Layout"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
@@ -10,7 +11,7 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 
 
 
-const Post = ({post}) => {
+const Post = ({post, ogImageUrl}) => {
 
     return(
         <Layout>
@@ -22,18 +23,18 @@ const Post = ({post}) => {
                 {/* Social media meta tags */}
                 <meta property="og:url" content="https://www.tunesketch.com" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content={post.attributes.title} key={`ogtitle` + post.attributes.title} />
-                <meta property="og:description" content={post.attributes.description} key={`ogdesc` + post.attributes.description}  />
-                <meta property="og:image" content="/meta.jpg" key={`ogimg` + post.attributes.title} />
+                <meta property="og:title" content={post.attributes.title}  />
+                <meta property="og:description" content={post.attributes.description}  />
+                <meta property="og:image" content={ogImageUrl}  />
 
-                <meta name="twitter:card" content="summary_large_image" key={`tcard` + post.attributes.title}/>
+                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:creator" content="@reachmhp"/>
                 <meta name="twitter:creator" content="@reachmhp" />
                 <meta property="twitter:domain" content="tunesketch.com"/>
                 <meta property="twitter:url" content="https://www.tunesketch.com/"/>
-                <meta name="twitter:title" content={post.attributes.title} key={`twtitle` + post.attributes.title}  />
-                <meta name="twitter:description" content={post.attributes.description} key={`twdesc` + post.attributes.description}  />
-                <meta name="twitter:image" content="/meta.jpg" key={`twimg` + post.attributes.title}/>
+                <meta name="twitter:title" content={post.attributes.title}   />
+                <meta name="twitter:description" content={post.attributes.description}  />
+                <meta name="twitter:image" content={ogImageUrl} />
             </Head>
         <motion.div 
         exit={{ opacity:0 }}
@@ -123,9 +124,41 @@ export async function getServerSideProps({ params: {slug} }){
     //const { params, req, res } = context
     const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
 
+    console.log(post_res.data.data[0])
+
+    cloudinary.config({
+        cloud_name: 'dbqn6vejg'
+    })
+
+    const cloudinaryUrl = cloudinary.url('card-background_vnpcgp', {
+        width: 1012,
+        height: 506,
+        transformation: [
+          {
+            fetch_format: 'auto',
+            quality: 'auto'
+          },
+          {
+            overlay: {
+              url: post_res.data.data[0].attributes.metaImage
+            }
+          },
+          {
+            flags: 'layer_apply',
+            width: 426,
+            height: 426,
+            gravity: 'north_west',
+            x: 325,
+            y: 42
+          }
+        ]
+      })
+
+
     return {
         props: {
-            post: post_res.data.data[0]
+            post: post_res.data.data[0],
+            ogImageUrl: cloudinaryUrl
         }
     }
 }

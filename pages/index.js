@@ -31,6 +31,7 @@ export default function Home({posts, metaPost, ogImageUrl }) {
         <meta property='og:image:secure_url' content={ogImageUrl} />
         <meta property='og:image:width' content="1012" />
         <meta property='og:image:height' content="506" />
+
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:title' content={metaPost.attributes.title} />
         <meta property='twitter:image' content={ogImageUrl} />
@@ -62,26 +63,13 @@ export async function getServerSideProps() {
     cloud_name: 'dbqn6vejg'
   })
 
-  const cloudinaryUrl = cloudinary.url('card-background_vnpcgp', {
+  const cloudinaryUrl = cloudinary.url('tunesketchHomeMeta_pfvmkf', {
     width: 1012,
     height: 506,
     transformation: [
       {
         fetch_format: 'auto',
         quality: 'auto'
-      },
-      {
-        overlay: {
-          url: 'https://res.cloudinary.com/dbqn6vejg/image/upload/v1651411247/synik_mydpzl.jpg'
-        }
-      },
-      {
-        flags: 'layer_apply',
-        width: 426,
-        height: 426,
-        gravity: 'north_west',
-        x: 325,
-        y: 42
       }
     ]
   })
