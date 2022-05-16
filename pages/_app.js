@@ -20,26 +20,26 @@ import { AnimatePresence } from 'framer-motion'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Script
-      strategy='lazyOnload'
-      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_TUNESKETCH_GOOGLE_ANALYTICS}`}
-    />
+      <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=G-98PH4GZC95`}
+      />
 
-    <Script id='tunesketch-google-analytics' strategy='lazyOnload'>
-      {
-        `window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', ${process.env.NEXT_PUBLIC_TUNESKETCH_GOOGLE_ANALYTICS});`
-      }
-    </Script>
+      <Script strategy='lazyOnload'>
+        {
+          `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-98PH4GZC95');`
+        }
+      </Script>
 
-    <AnimatePresence exitBeforeEnter>
-      <ThemeProvider enableSystem={true} attribute="class">
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
+        <ThemeProvider enableSystem={true} attribute="class">
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </AnimatePresence>
     </>
   )
 }
