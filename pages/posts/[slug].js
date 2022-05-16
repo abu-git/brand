@@ -127,7 +127,7 @@ export async function getServerSideProps({ params: {slug} }){
     //const { params, req, res } = context
     const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
 
-    console.log(post_res.data.data[0])
+    //console.log(post_res.data.data[0])
 
     cloudinary.config({
         cloud_name: 'dbqn6vejg'

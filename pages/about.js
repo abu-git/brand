@@ -37,7 +37,7 @@ function About() {
         >
           <div className='bg-white dark:bg-slate-900'>
               <Navigation />
-              <section className='bg-white dark:bg-slate-900 md:mx-20 md:mb-52 lg:mb-56 lg:mx-48 mt-14 px-6 grid grid-cols-1 md:grid-cols-2 '>
+              <section className='bg-white dark:bg-slate-900 md:mx-20 md:mb-56 lg:mb-56 lg:mx-48 mt-14 px-6 grid grid-cols-1 md:grid-cols-2 '>
                   {/*--- Left Div on big screens Top Div on small screens ---*/}
                   <div className='dark:bg-slate-900 md:text-5xl lg:text-6xl text-4xl font-bold text-right text-black dark:text-white mt-4 pr-5 pb-5 '>
                       <h1>We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community. This is one of our contributions.</h1>
