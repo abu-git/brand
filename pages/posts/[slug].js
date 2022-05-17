@@ -48,7 +48,7 @@ const Post = ({post, ogImageUrl}) => {
                 <Navigation />
                 <div className="flex items-center ml-6">
                     <Link href="/posts" passHref>
-                    <span className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-teal-700">
+                    <span className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-sky-900">
                         <ArrowNarrowLeftIcon className="h-7 w-7" />
                     </span>
                     </Link>
