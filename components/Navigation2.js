@@ -70,7 +70,7 @@ function Navigation() {
                         height={35}
                         alt='tunesketch logo'
                     />
-                    <h3 className='sm:text-md md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-green-800 pl-1'>tunesketch</h3>
+                    <h3 className='sm:text-md md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-cyan-200 to-sky-900 pl-1'>tunesketch</h3>
                 </div>
             </Link>
             
