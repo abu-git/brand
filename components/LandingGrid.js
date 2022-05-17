@@ -17,7 +17,7 @@ function LandingGrid({posts}) {
         </div>
         <div className='flex justify-center mt-12'>
             <Link href="/posts" passHref>
-            <div className='rounded-full py-2 px-3 uppercase font-bold cursor-pointer tracking-wider border-black hover:border-teal-700 dark:border-white border-2 dark:hover:bg-slate-100 dark:hover:text-slate-900 dark:text-white hover:text-white hover:bg-teal-700 transition ease-out duration-500'>More Posts</div>
+            <div className='rounded-full py-2 px-3 uppercase font-bold cursor-pointer tracking-wider border-black hover:border-sky-900 dark:border-white border-2 dark:hover:bg-slate-100 dark:hover:text-slate-900 dark:text-white hover:text-white hover:bg-sky-900 transition ease-out duration-500'>More Posts</div>
             </Link>
         </div>
     </>
