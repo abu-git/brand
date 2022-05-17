@@ -49,7 +49,7 @@ export default function Home({posts, metaPost, ogImageUrl }) {
       >
         <div className='bg-white dark:bg-slate-900'>
           <Navigation />
-          <LandingHeader post={posts.data[5].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          <LandingHeader post={posts.data[0].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
@@ -82,7 +82,7 @@ export async function getServerSideProps() {
   return {
     props: {
       posts: postsResponse.data,
-      metaPost: postsResponse.data.data[5],
+      metaPost: postsResponse.data.data[0],
       ogImageUrl: cloudinaryUrl,
     },
   }
