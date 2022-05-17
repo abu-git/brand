@@ -37,7 +37,7 @@ export default function Home({posts, metaPost, ogImageUrl }) {
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:title' content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' />
-        <meta property='twitter:image' content='https://res.cloudinary.com/dbqn6vejg/image/upload/v1651425549/tunesketchHomeMeta_lmg96b.png' />
+        <meta property='twitter:image' content='https://res.cloudinary.com/dbqn6vejg/image/upload/v1652787389/meta_vbuhwn.jpg' />
         <meta name="twitter:creator" content="@reachmhp"/>
         <meta name="twitter:creator" content="@reachmhp" />
       </Head>
