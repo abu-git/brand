@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import Layout from '../components/Layout'
+import Sidebar from '../components/Sidebar'
 
 
 export default function Home({posts, metaPost, ogImageUrl }) {
@@ -48,7 +49,8 @@ export default function Home({posts, metaPost, ogImageUrl }) {
         animate={{ opacity: 1 }}
       >
         <div className='bg-white dark:bg-slate-900'>
-          <Navigation />
+          {/*<Navigation />*/}
+          <Sidebar />
           <LandingHeader post={posts.data[0].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <LandingGrid posts={gridPosts} />
           <Playlists />

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import Navigation from '../components/Navigation2'
+import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
@@ -36,7 +36,7 @@ function About() {
           animate={{ opacity: 1 }}
         >
           <div className='bg-white dark:bg-slate-900'>
-              <Navigation />
+              <Sidebar />
               <section className='bg-white dark:bg-slate-900 md:mx-20 md:mb-56 lg:mb-56 lg:mx-48 mt-14 px-6 grid grid-cols-1 md:grid-cols-2 '>
                   {/*--- Left Div on big screens Top Div on small screens ---*/}
                   <div className='dark:bg-slate-900 md:text-5xl lg:text-6xl text-4xl font-bold text-right text-black dark:text-white mt-4 pr-5 pb-5 '>
