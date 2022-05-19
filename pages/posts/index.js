@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
-import Navigation from '../../components/Navigation2'
+import Sidebar from '../../components/Sidebar'
 import Footer from '../../components/Footer'
 import PostsGridItem from '../../components/PostsGridItem'
 import axios from 'axios'
@@ -41,7 +41,7 @@ function Posts({posts}) {
             animate={{ opacity: 1 }}
         >  
             <div className='bg-white dark:bg-slate-900'>
-                <Navigation />
+                <Sidebar />
                 <section className='mt-14 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
                     <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Posts</h2>
                     {posts.data.map((post) => {

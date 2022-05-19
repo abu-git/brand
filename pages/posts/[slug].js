@@ -3,7 +3,7 @@ import Link from "next/link"
 import Head from "next/head"
 import { v2 as cloudinary } from 'cloudinary'
 import Layout from "../../components/Layout"
-import Navigation from "../../components/Navigation"
+import Sidebar from "../../components/Sidebar2"
 import Footer from "../../components/Footer"
 import axios from 'axios'
 import { motion } from 'framer-motion'
@@ -45,7 +45,7 @@ const Post = ({post, ogImageUrl}) => {
         animate={{ opacity: 1 }}
         >
             <div className='bg-white dark:bg-slate-900'>
-                <Navigation />
+                <Sidebar />
                 <div className="flex items-center ml-6">
                     <Link href="/posts" passHref>
                     <span className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-sky-900">
