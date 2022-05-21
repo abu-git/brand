@@ -45,7 +45,7 @@ function Sidebar() {
                     {/*<a className='w-1/3 md:w-1/4 sm:text-lg md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-yellow-400 to-green-800'>
                         Brand.
                     </a>*/}
-                    <div className='flex items-center w-2/5 md:w-1/4 cursor-pointer'>
+                    <div className='flex items-center w-1/3 md:w-1/4 cursor-pointer'>
                         <Image
                             src='/favicon/favicon-32x32.png'
                             width={35}
