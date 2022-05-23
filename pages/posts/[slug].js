@@ -1,6 +1,7 @@
 import Image from "next/image"
-import Link from "next/link"
+//import Link from "next/link"
 import Head from "next/head"
+import { useRouter } from "next/router"
 import { v2 as cloudinary } from 'cloudinary'
 import Layout from "../../components/Layout"
 import Sidebar from "../../components/Sidebar2"
@@ -12,6 +13,8 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 
 
 const Post = ({post, ogImageUrl}) => {
+
+    const router = useRouter()
 
     return(
         <Layout>
@@ -47,11 +50,11 @@ const Post = ({post, ogImageUrl}) => {
             <div className='bg-white dark:bg-slate-900'>
                 <Sidebar />
                 <div className="flex items-center ml-6">
-                    <Link href="/posts" passHref>
-                    <span className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-sky-900">
+                    {/*<Link href="/posts" passHref>*/}
+                    <button onClick={() => router.back()} className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-sky-900">
                         <ArrowNarrowLeftIcon className="h-7 w-7" />
-                    </span>
-                    </Link>
+                    </button>
+                    {/*</Link>*/}
                 </div>
                 <section className="flex flex-col mt-2 mx-auto">
                         <div className="mx-8 lg:mx-16">
