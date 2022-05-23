@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Layout from '../../components/Layout'
 import Sidebar from '../../components/Sidebar'
 import Footer from '../../components/Footer'
@@ -10,8 +11,13 @@ import { motion } from 'framer-motion'
 // for deployed app
 //const { NEXT_PUBLIC_STRAPI_API_URL } = process.env || "https://localhost:1337"
 
-function Posts({posts}) {
-  return (
+function Posts({posts, page, count}) {
+
+    const router = useRouter()
+
+    const lastPage = Math.ceil(count/6)
+
+    return (
     <Layout>
         <Head>
             <title>tunesketch | Articles</title>
@@ -44,9 +50,17 @@ function Posts({posts}) {
                 <Sidebar />
                 <section className='mt-14 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
                     <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Posts</h2>
+                    <nav className='flex justify-between mb-5'>
+                        <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Previous</button>
+                        <button disabled={page >= lastPage} onClick={() => router.push(`/posts?page=${page + 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-r-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Next</button>
+                    </nav>
                     {posts.data.map((post) => {
                         return<PostsGridItem post={post} key={post.id}/>
                     })}
+                    <nav className='flex justify-between mb-5'>
+                        <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Previous</button>
+                        <button disabled={page >= lastPage} onClick={() => router.push(`/posts?page=${page + 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-r-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Next</button>
+                    </nav>
                 </section>
                 <Footer />
             </div>
@@ -57,15 +71,22 @@ function Posts({posts}) {
 
 export default Posts
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ query: {page = 1}}) {
+
+    const start = +page === 1 ? 0 : (+page - 1) * 6
+    console.log("start", start)
+
     //const postsResponse = await axios.get("http://localhost:1337/api/posts")//<---- for local machine
-    const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
-    //console.log("data array",postsResponse.data)
-  
-  
+    //const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
+    const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=6`)
+    console.log("data array",postsResponse.data)
+
+    
     return {
         props: {
             posts: postsResponse.data,
+            page: parseInt(page),
+            count: postsResponse.data.meta.pagination.total
         },
     }
 }
