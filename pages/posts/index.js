@@ -74,12 +74,12 @@ export default Posts
 export async function getServerSideProps({ query: {page = 1}}) {
 
     const start = +page === 1 ? 0 : (+page - 1) * 6
-    console.log("start", start)
+    //console.log("start", start)
 
     //const postsResponse = await axios.get("http://localhost:1337/api/posts")//<---- for local machine
     //const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
     const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=6`)
-    console.log("data array",postsResponse.data)
+    //console.log("data array",postsResponse.data)
 
     
     return {
