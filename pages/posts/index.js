@@ -48,18 +48,50 @@ function Posts({posts, page, count}) {
         >  
             <div className='bg-white dark:bg-slate-900'>
                 <Sidebar />
-                <section className='mt-14 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
+                <section className='mt-14 mb-24 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
                     <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Posts</h2>
                     <nav className='flex justify-between mb-5'>
-                        <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Previous</button>
-                        <button disabled={page >= lastPage} onClick={() => router.push(`/posts?page=${page + 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-r-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Next</button>
+                        {page > 1 &&
+                            <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white flex items-center'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                                </svg>
+                                <h5 className='text-md'>Previous Page</h5>
+                            </button>
+                        }
+
+                        {page != lastPage &&
+                            <button disabled={page >= lastPage} onClick={() => router.push(`/posts?page=${page + 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-r-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white flex items-center'>
+                                <h5 className='text-md pb-1'>Next Page</h5>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        }
+                        
+                        
                     </nav>
                     {posts.data.map((post) => {
                         return<PostsGridItem post={post} key={post.id}/>
                     })}
                     <nav className='flex justify-between mb-5'>
-                        <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Previous</button>
-                        <button disabled={page >= lastPage} onClick={() => router.push(`/posts?page=${page + 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-r-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white'>Next</button>
+                        {page > 1 &&
+                            <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white flex items-center'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                                </svg>
+                                <h5 className='text-md'>Previous Page</h5>
+                            </button>
+                        }
+
+                        {page != lastPage &&
+                            <button disabled={page >= lastPage} onClick={() => router.push(`/posts?page=${page + 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-r-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white flex items-center'>
+                            <h5 className='text-md pb-1'>Next Page</h5>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        }
                     </nav>
                 </section>
                 <Footer />
