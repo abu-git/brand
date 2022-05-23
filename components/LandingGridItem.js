@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function LandingGridItem({post}) {
+
     
     return (
         <Link href={`/posts/${post.attributes.slug}`} passHref>
@@ -21,16 +22,16 @@ function LandingGridItem({post}) {
                     <span className='text-md lg:text-lg text-gray-700 dark:text-gray-100 mt-2 mb-2 text-justify px-3'>
                         {post.attributes.description}
                     </span>
-                    <span className='flex justify-end'>
-                        <h5 className='px-3 text-xs text-gray-500 dark:text-gray-100 self-center'>April 02, 2022</h5>
-                        <div className='px-3 content-center'>
+                    <span className='flex justify-end mb-3'>
+                        <h5 className='px-3 text-xs text-gray-500 dark:text-gray-100 self-center'>{(new Date(post.attributes.publishedAt)).toDateString()}</h5>
+                        {/*<div className='px-3 content-center'>
                             <Image 
                                 width={20}
                                 height={20}
                                 alt="author"
                                 src="/sam-modified.png"
                             />
-                        </div>
+                        </div>*/}
                     </span>
             </div>
         </Link>

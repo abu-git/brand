@@ -56,6 +56,7 @@ const Post = ({post, ogImageUrl}) => {
                 <section className="flex flex-col mt-2 mx-auto">
                         <div className="mx-8 lg:mx-16">
                             <h3 className="text-2xl lg:text-5xl font-extrabold text-black dark:text-white text-center mb-5 px-8">{post.attributes.title}</h3>
+                            <h3 className="text-xl lg:text-3xl font-bold text-black dark:text-white text-center mb-5 px-8">{post.attributes.publishedAt}</h3>
                         </div>
                         <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 md:mx-24 lg:mx-48 px-4 py-5 text-center">
                             <Image 
@@ -127,7 +128,7 @@ export async function getServerSideProps({ params: {slug} }){
     
     const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
 
-    //console.log(post_res.data.data[0])
+    console.log(post_res.data.data[0])
 
     cloudinary.config({
         cloud_name: 'dbqn6vejg'
