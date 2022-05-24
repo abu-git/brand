@@ -17,8 +17,8 @@ const Post = ({post, ogImageUrl}) => {
     const router = useRouter()
     const thePath = router.asPath
     const slugURL = "/posts/" + post.attributes.slug
-    //console.log("path", thePath)
-    //console.log("slug url", slugURL)
+    console.log("path", thePath)
+    console.log("slug url", slugURL)
 
     //
     const onBackClick = (e) => {
