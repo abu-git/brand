@@ -15,16 +15,18 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 const Post = ({post, ogImageUrl}) => {
 
     const router = useRouter()
-    console.log(document.referrer)
+    //console.log(document.referrer)
 
     const onBackClick = (e) => {
         e.preventDefault()
 
-        if(document.referrer){
+        router.back()
+
+        /*if(document.referrer){
             router.push('/')
         }else{
             router.back()
-        }
+        }*/
     }
 
     return(
