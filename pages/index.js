@@ -13,13 +13,13 @@ import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
 
 
-export default function Home({posts, metaPost, ogImageUrl }) {
+export default function Home({posts, ogImageUrl }) {
   //retreive main header grid data
   //console.log(posts.data)
   const [gridPosts, setGridPosts] = useState([])
 
   useEffect(() => {
-    setGridPosts(posts.data.slice(1, 4))
+    setGridPosts(posts.data.slice(2, 5))
   }, [posts])
 
   return (
@@ -38,7 +38,7 @@ export default function Home({posts, metaPost, ogImageUrl }) {
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:title' content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' />
-        <meta property='twitter:image' content='https://res.cloudinary.com/dbqn6vejg/image/upload/v1652787389/meta_vbuhwn.jpg' />
+        <meta property='twitter:image' content='https://res.cloudinary.com/dbqn6vejg/image/upload/v1653397513/meta_ieuchp.jpg' />
         <meta name="twitter:creator" content="@reachmhp"/>
         <meta name="twitter:creator" content="@reachmhp" />
       </Head>
@@ -51,7 +51,7 @@ export default function Home({posts, metaPost, ogImageUrl }) {
         <div className='bg-white dark:bg-slate-900'>
           {/*<Navigation />*/}
           <Sidebar />
-          <LandingHeader post={posts.data[0].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          <LandingHeader post={posts.data[1].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
@@ -84,7 +84,7 @@ export async function getServerSideProps() {
   return {
     props: {
       posts: postsResponse.data,
-      metaPost: postsResponse.data.data[0],
+      //metaPost: postsResponse.data.data[0],
       ogImageUrl: cloudinaryUrl,
     },
   }

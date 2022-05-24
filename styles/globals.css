@@ -11,7 +11,7 @@
 }
 
 .active {
-    @apply bg-clip-text text-transparent bg-gradient-to-l from-cyan-200 to-sky-900;
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-amber-200 to-yellow-900;
 }
 
 .socialsHover {

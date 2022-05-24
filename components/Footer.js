@@ -29,7 +29,7 @@ function Footer() {
     </footer>
     <div className='flex justify-center'>
         <h4 className='text-md font-light text-black dark:text-white pb-5'>
-            ©2022 Design by <a href="https://sam-portfolio-alpha.vercel.app/"><span className='bg-clip-text text-transparent bg-gradient-to-l from-cyan-200 to-sky-900 cursor-pointer'>Samuel Abu</span></a>
+            ©2022 Design by <a href="https://sam-portfolio-alpha.vercel.app/"><span className='bg-clip-text text-transparent bg-gradient-to-l from-amber-200 to-yellow-900 cursor-pointer'>Samuel Abu</span></a>
         </h4>
     </div>
     </div>
