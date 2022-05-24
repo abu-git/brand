@@ -17,13 +17,14 @@ const Post = ({post, ogImageUrl}) => {
     const router = useRouter()
     const thePath = router.asPath
     const theQuery = router.query
-    console.log(router.query)
+    //console.log(router.query)
     const slugURL = "/posts/" + post.attributes.slug
-    console.log("path", thePath)
-    console.log("slug url", slugURL)
+    //console.log("path", thePath)
+    //console.log("slug url", slugURL)
 
-    //asPath and slug comparism is used for continues functionality of go back arrow on [slug]
-    //works on desktop but not on mobile deveices
+    //router.asPath and router.query comparism is used for continues functionality of go back arrow on [slug]
+    //thePath works for desktop devices and theQuery specifically works for mobile devices
+    //theQuery might also work for desktop
     const onBackClick = (e) => {
         e.preventDefault()
         if(thePath === slugURL){
