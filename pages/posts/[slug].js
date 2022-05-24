@@ -15,6 +15,17 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 const Post = ({post, ogImageUrl}) => {
 
     const router = useRouter()
+    console.log(document.referrer)
+
+    const onBackClick = (e) => {
+        e.preventDefault()
+
+        if(document.referrer){
+            router.push('/')
+        }else{
+            router.back()
+        }
+    }
 
     return(
         <Layout>
@@ -51,7 +62,7 @@ const Post = ({post, ogImageUrl}) => {
                 <Sidebar />
                 <div className="flex items-center ml-6">
                     {/*<Link href="/posts" passHref>*/}
-                    <button onClick={() => router.back()} className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-sky-900">
+                    <button onClick={onBackClick} className="mt-14 pl-5 cursor-pointer text-sm mr-4 py-3 px-4 rounded-full border-0 text-black dark:text-white hover:text-white hover:bg-sky-900">
                         <ArrowNarrowLeftIcon className="h-7 w-7" />
                     </button>
                     {/*</Link>*/}
