@@ -70,7 +70,7 @@ export async function getServerSideProps() {
     cloud_name: 'dbqn6vejg'
   })
 
-  const cloudinaryUrl = cloudinary.url('meta_vbuhwn', {
+  const cloudinaryUrl = cloudinary.url('meta_ieuchp', {
     width: 1012,
     height: 506,
     /*transformation: [
