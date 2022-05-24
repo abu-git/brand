@@ -20,6 +20,7 @@ const Post = ({post, ogImageUrl}) => {
     const onBackClick = (e) => {
         e.preventDefault()
 
+        console.log(router.asPath)
         router.back()
 
         /*if(document.referrer){
