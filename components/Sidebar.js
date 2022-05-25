@@ -84,7 +84,7 @@ function Sidebar() {
                     </Link>
                     <Link href="/posts" passHref>
                         <li className='py-1 cursor-pointer'>
-                            <a className={router.pathname == "/posts" ? "active" : ""}>Articles</a>
+                            <a className={router.pathname == "/posts" ? "active" : ""}>Music Reviews</a>
                         </li>
                     </Link>
                     <Link href="/about" passHref>
