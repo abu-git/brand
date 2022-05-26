@@ -49,7 +49,7 @@ function Posts({posts, page, count}) {
             <div className='bg-white dark:bg-slate-900'>
                 <Sidebar />
                 <section className='mt-14 mb-24 px-6 lg:px-48 flex flex-col bg-white dark:bg-slate-900'>
-                    <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Reviews / {page}</h2>
+                    <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Reviews - pg.{page}</h2>
                     <nav className='flex justify-between mb-5'>
                         {page > 1 &&
                             <button disabled={page <= 1} onClick={() => router.push(`/posts?page=${page - 1}`)} className='h-10 px-5 transition-colors duration-150 bg-white dark:bg-slate-900 rounded-l-lg focus:shadow-outline hover:bg-sky-900 dark:hover:bg-sky-900 text-black dark:text-white hover:text-white flex items-center'>

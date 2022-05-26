@@ -81,7 +81,7 @@ function Sidebar() {
                     </Link>
                     <Link href="/posts" passHref>
                         <li className='py-1 cursor-pointer'>
-                            <a className='active'>Music Reviews</a>
+                            <a className='active'>Reviews</a>
                         </li>
                     </Link>
                     <Link href="/about" passHref>
