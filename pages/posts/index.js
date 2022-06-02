@@ -16,6 +16,14 @@ function Posts({posts, page, count}) {
     const router = useRouter()
 
     const lastPage = Math.ceil(count/6)
+
+    //sorting but not used---if sort doesnt affect post object
+    //ascending a.id -b.id
+    let temp = posts.data
+    let temp2 = temp.sort((a , b) => {
+        return b.id - a.id//descending order
+    })
+    //console.log(temp2)
     
     return (
     <Layout>
