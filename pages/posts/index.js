@@ -111,11 +111,11 @@ export async function getServerSideProps({ query: {page = 1}}) {
     //const postsResponse = await axios.get("http://localhost:1337/api/posts")//<---- for local machine
     //const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
     const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=6`)
-    console.log(postsResponse.data)
+    //console.log(postsResponse.data)
 
-    postsResponse.data.data.sort()
+    //postsResponse.data.data.sort()
 
-    console.log(postsResponse.data)
+    //console.log(postsResponse.data)
 
     return {
         props: {
