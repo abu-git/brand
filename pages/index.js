@@ -51,7 +51,7 @@ export default function Home({posts, ogImageUrl }) {
         <div className='bg-white dark:bg-slate-900'>
           {/*<Navigation />*/}
           <Sidebar />
-          <LandingHeader post={posts.data[11].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          <LandingHeader post={posts.data[12].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
