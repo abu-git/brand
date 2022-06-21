@@ -15,7 +15,7 @@ function LandingGridItem({post}) {
                         alt={post.attributes.title}
                         src={`/${post.attributes.gridImage}`}
                         layout='responsive'
-                        className='brightness-50'
+                        className='brightness-[0.4]'
                     />
                     <h3 className='absolute brightness-100 font-bold text-3xl -mt-36 text-white px-5'>{post.attributes.title}</h3>
                 </div>
