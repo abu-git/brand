@@ -15,7 +15,7 @@ function Posts({posts, page, count}) {
 
     const router = useRouter()
 
-    const lastPage = Math.ceil(count/6)
+    const lastPage = Math.ceil(count/7)
 
     //sorting but not used---if sort doesnt affect post object
     //ascending a.id -b.id
@@ -113,12 +113,12 @@ export default Posts
 
 export async function getServerSideProps({ query: {page = 1}}) {
 
-    const start = +page === 1 ? 0 : (+page - 1) * 6
+    const start = +page === 1 ? 0 : (+page - 1) * 7
     //console.log("start", start)
 
     //const postsResponse = await axios.get("http://localhost:1337/api/posts")//<---- for local machine
     //const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
-    const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=6`)
+    const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=7`)
     //console.log(postsResponse.data)
 
     //postsResponse.data.data.sort()
