@@ -172,7 +172,7 @@ export async function getServerSideProps({ params: {slug} }){
           },
           {
             flags: 'layer_apply',
-            width: 424,
+            width: 422,
             height: 426,
             gravity: 'north_west',
             x: 325,
