@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import connectMongo from '../../utils/connectMongoDB'
-import Blog from '../../models/blogModel'
+import { Blogs } from '../../models/blogModel'
 import validator from 'validator'
 
 function Create() {
@@ -137,45 +137,79 @@ function Create() {
                     <input
                         type="text"
                         value={title}
-                        onChange={(e) => { setTitle(e.target.value)} } 
+                        onChange={(e) => { setTitle(e.target.value) }} 
                         className='w-full h-10 px-3 border border-black rounded-md'
                     />
+                    {errors?.title && (<p className='text-red-500 mt-1'>title cannot be empty</p>)}
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>description</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={description}
+                        onChange={(e) => { setDescription(e.target.value) }} 
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.description && (<p className='text-red-500 mt-1'>description cannot be empty</p>)}
                 </div>
             </div>
 
             <div className='w-full px-2 py-2'>
                 <label className='block mb-1'>content</label>
-                <textarea className='w-full h-24 px-3 border border-black rounded-md'></textarea>
+                <textarea
+                    type="text"
+                    value={content}
+                    onChange={(e) => { setContent(e.target.value) }} 
+                    className='w-full h-24 px-3 border border-black rounded-md'>
+                </textarea>
+                {errors?.content && (<p className='text-red-500 mt-1'>content cannot be empty</p>)}
             </div>
 
             <div className='w-full px-2 py-2'>
                 <label className='block mb-1'>more content</label>
-                <textarea className='w-full h-24 px-3 border border-black rounded-md'></textarea>
+                <textarea
+                    type='text'
+                    value={more_content}
+                    onChange={(e) => { setMore_content(e.target.value) }} 
+                    className='w-full h-24 px-3 border border-black rounded-md'>
+                </textarea>
             </div>
 
             <div className='flex py-2'>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>gridImage</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={gridImage}
+                        onChange={(e) => { setGridImage(e.target.value) }} 
+                        className='w-full h-10 px-3 border border-black rounded-md'/>
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>slug</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={slug}
+                        onChange={(e) => { setSlug(e.target.value) }} 
+                        className='w-full h-10 px-3 border border-black rounded-md'/>
                 </div>
             </div>
 
             <div className='flex py-2'>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>spotify</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={spotify}
+                        onChange={(e) => { setSpotify(e.target.value) }} 
+                        className='w-full h-10 px-3 border border-black rounded-md'/>
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>youtube</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={youtube}
+                        onChange={(e) => { setYoutube(e.target.value) }} 
+                        className='w-full h-10 px-3 border border-black rounded-md'/>
                 </div>
             </div>
 
@@ -197,3 +231,14 @@ function Create() {
 }
 
 export default Create
+
+/*export const getServerSideProps = async () => {
+    console.log('Connecting to MongoDB...')
+    await connectMongo()
+    console.log('Connected to MongoDB...')
+    return{
+        props: {
+
+        }
+    }
+}*/

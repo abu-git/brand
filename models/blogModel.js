@@ -18,6 +18,8 @@ const blogSchema = new Schema({
     }
 })
 
-const Blog = models.Blog || model('Blog', blogSchema)
+//const Blog = models.Blog || model('Blog', blogSchema)
 
-export default Blog
+global.Blog = global.blogSchema || model('BlogTunesketch', blogSchema)
+
+export default global.blogSchema
