@@ -183,6 +183,7 @@ function Create() {
                         value={gridImage}
                         onChange={(e) => { setGridImage(e.target.value) }} 
                         className='w-full h-10 px-3 border border-black rounded-md'/>
+                        {errors?.gridImage && (<p className='text-red-500 mt-1'>gridImage cannot be empty</p>)}
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>slug</label>
@@ -216,11 +217,19 @@ function Create() {
             <div className='flex py-2'>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>itunes</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={itunes}
+                        onChange={(e) => { setItunes(e.target.value) }} 
+                        className='w-full h-10 px-3 border border-black rounded-md'/>
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>metaImage</label>
-                    <input className='w-full h-10 px-3 border border-black rounded-md'/>
+                    <input
+                        type="text"
+                        value={metaImage}
+                        onChange={(e) => { setMetaImage(e.target.value)}} 
+                        className='w-full h-10 px-3 border border-black rounded-md'/>
                 </div>
             </div>
 
