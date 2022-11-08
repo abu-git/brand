@@ -1,25 +1,41 @@
-import { Schema, model, models } from 'mongoose'
+import mongoose from 'mongoose'
 
 
-const blogSchema = new Schema({
-    title: String,
-    description: String,
-    content: String,
-    more_content: String,
-    gridImage: String,
-    slug: String,
-    spotify: String,
-    youtube: String,
-    itunes: String,
-    metaImage: String,
+const BlogSchema = new mongoose.Schema({
+    title: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    content: {
+        type: String,
+    },
+    more_content: {
+        type: String,
+    },
+    gridImage: {
+        type: String,
+    },
+    slug: {
+        type: String,
+    },
+    spotify: {
+        type: String,
+    },
+    youtube: {
+        type: String,
+    },
+    itunes: {
+        type: String,
+    },
+    metaImage: {
+        String,
+    },
     date: {
         type: Date,
         default: Date.now
     }
 })
 
-//const Blog = models.Blog || model('Blog', blogSchema)
-
-global.Blog = global.blogSchema || model('BlogTunesketch', blogSchema)
-
-export default global.blogSchema
+export default mongoose.models.Blog || mongoose.model('blog', BlogSchema)

@@ -24,31 +24,6 @@ function Create() {
     const [showSuccessMsg, setShowSuccessMsg] = useState(false)
     const [showFailureMsg, setShowFailureMsg] = useState(false)
 
-    const createBlog = async () => {
-        const res = await fetch('/api/blog/add', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-
-            body: JSON.stringify({
-                title: req.body.title,
-                description: req.body.description,
-                content: req.body.content,
-                more_content: req.body.content,
-                gridImage: req.body.gridImage,
-                slug: req.body.slug,
-                spotify: req.body.spotify,
-                youtube: req.body.youtube,
-                itunes: req.body.itunes,
-                metaImage: req.body.metaImage
-            })
-        })
-
-        const data = await res.json()
-        console.log(data)
-    }
-
     const handleValidation = () => {
         let tempErrors = {}
         let isValid = true
@@ -100,16 +75,16 @@ function Create() {
                 },
     
                 body: JSON.stringify({
-                    title: req.body.title,
-                    description: req.body.description,
-                    content: req.body.content,
-                    more_content: req.body.content,
-                    gridImage: req.body.gridImage,
-                    slug: req.body.slug,
-                    spotify: req.body.spotify,
-                    youtube: req.body.youtube,
-                    itunes: req.body.itunes,
-                    metaImage: req.body.metaImage
+                    title: title,
+                    description: description,
+                    content: content,
+                    more_content: more_content,
+                    gridImage: gridImage,
+                    slug: slug,
+                    spotify: spotify,
+                    youtube: youtube,
+                    itunes: itunes,
+                    metaImage: metaImage
                 })
             })
 
@@ -182,8 +157,9 @@ function Create() {
                         type="text"
                         value={gridImage}
                         onChange={(e) => { setGridImage(e.target.value) }} 
-                        className='w-full h-10 px-3 border border-black rounded-md'/>
-                        {errors?.gridImage && (<p className='text-red-500 mt-1'>gridImage cannot be empty</p>)}
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.gridImage && (<p className='text-red-500 mt-1'>gridImage cannot be empty</p>)}
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>slug</label>
@@ -191,7 +167,9 @@ function Create() {
                         type="text"
                         value={slug}
                         onChange={(e) => { setSlug(e.target.value) }} 
-                        className='w-full h-10 px-3 border border-black rounded-md'/>
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.slug && (<p className='text-red-500 mt-1'>slug cannot be empty</p>)}
                 </div>
             </div>
 
@@ -202,7 +180,9 @@ function Create() {
                         type="text"
                         value={spotify}
                         onChange={(e) => { setSpotify(e.target.value) }} 
-                        className='w-full h-10 px-3 border border-black rounded-md'/>
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.spotify && (<p className='text-red-500 mt-1'>spotify cannot be empty</p>)}
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>youtube</label>
@@ -210,7 +190,9 @@ function Create() {
                         type="text"
                         value={youtube}
                         onChange={(e) => { setYoutube(e.target.value) }} 
-                        className='w-full h-10 px-3 border border-black rounded-md'/>
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.youtube && (<p className='text-red-500 mt-1'>youtube cannot be empty</p>)}
                 </div>
             </div>
 
@@ -221,7 +203,9 @@ function Create() {
                         type="text"
                         value={itunes}
                         onChange={(e) => { setItunes(e.target.value) }} 
-                        className='w-full h-10 px-3 border border-black rounded-md'/>
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.itunes && (<p className='text-red-500 mt-1'>itunes cannot be empty</p>)}
                 </div>
                 <div className='w-full px-2'>
                     <label className='block mb-1'>metaImage</label>
@@ -229,10 +213,13 @@ function Create() {
                         type="text"
                         value={metaImage}
                         onChange={(e) => { setMetaImage(e.target.value)}} 
-                        className='w-full h-10 px-3 border border-black rounded-md'/>
+                        className='w-full h-10 px-3 border border-black rounded-md'
+                    />
+                    {errors?.metaImage && (<p className='text-red-500 mt-1'>metaImage cannot be empty</p>)}
                 </div>
             </div>
-
+            {showSuccessMsg === true && <p className='text-green-500 font-semibold mt-1'>Success! Added to Database</p>}
+            {showFailureMsg === true && <p className='text-red-500 font-semibold mt-1'>Oops! Something went wrong!</p>}
             <button className='h-12 mt-4 w-full text-white transition-colors duration-150 bg-amber-700 rounded-lg focus:shadow-outline hover:bg-amber-800'>Add to Database</button>
         </form>
     </div>
