@@ -30,7 +30,7 @@ const BlogSchema = new mongoose.Schema({
         type: String,
     },
     metaImage: {
-        String,
+        type: String,
     },
     date: {
         type: Date,

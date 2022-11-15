@@ -88,12 +88,13 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                 <form id={formId} onSubmit={handleSubmit} className='bg-white mx-5 my-6 py-4 px-3'>
                     <div className='flex py-2'>
                         <div className='w-full px-2'>
-                            <label className='block mb-1'>title</label>
+                            <label htmlFor="title" className='block mb-1'>title</label>
                             <input
                                 type="text"
+                                name="title"
                                 value={form.title}
                                 onChange={handleChange} 
-                                className='w-full h-10 px-3 border border-black rounded-md'
+                                className='w-full h-10 px-3 border border-black rounded-md text-black'
                                 required
                             />
                             {/*errors?.title && (<p className='text-red-500 mt-1'>title cannot be empty</p>)*/}
@@ -102,6 +103,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>description</label>
                             <input
                                 type="text"
+                                name="description"
                                 value={form.description}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -115,6 +117,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                         <label className='block mb-1'>content</label>
                         <textarea
                             type="text"
+                            name="content"
                             value={form.content}
                             onChange={handleChange} 
                             className='w-full h-24 px-3 border border-black rounded-md'
@@ -128,6 +131,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                         <label className='block mb-1'>more content</label>
                         <textarea
                             type='text'
+                            name="more_content"
                             value={form.more_content}
                             onChange={ handleChange } 
                             className='w-full h-24 px-3 border border-black rounded-md'>
@@ -139,6 +143,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>gridImage</label>
                             <input
                                 type="text"
+                                name="gridImage"
                                 value={form.gridImage}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -150,6 +155,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>slug</label>
                             <input
                                 type="text"
+                                name="slug"
                                 value={form.slug}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -164,6 +170,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>spotify</label>
                             <input
                                 type="text"
+                                name="spotify"
                                 value={form.spotify}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -175,6 +182,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>youtube</label>
                             <input
                                 type="text"
+                                name="youtube"
                                 value={form.youtube}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -189,6 +197,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>itunes</label>
                             <input
                                 type="text"
+                                name="itunes"
                                 value={form.itunes}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -200,6 +209,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                             <label className='block mb-1'>metaImage</label>
                             <input
                                 type="text"
+                                name="metaImage"
                                 value={form.metaImage}
                                 onChange={handleChange} 
                                 className='w-full h-10 px-3 border border-black rounded-md'
@@ -216,3 +226,5 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
         </>
     )
 }
+
+export default AddBlogForm
