@@ -1,5 +1,5 @@
-import connectMongo from "../../../utils/connectMongoDB"
-import Blog from "../../../models/blogModel"
+import dbConnect from '../../../lib/dbConnect'
+import Blog from "../../../models/Blog"
 
 /**
  * 

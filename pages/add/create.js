@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import connectMongo from '../../utils/connectMongoDB'
-import { Blogs } from '../../models/blogModel'
 import validator from 'validator'
 
 function Create() {
