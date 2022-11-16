@@ -38,7 +38,7 @@ const AddBlogForm = ({ formId, blogForm, forNewBlog = true }) => {
                 throw new Error(res.status)
             }
 
-            router.push('/')
+            router.push('/add')
         }catch(error){
             console.log(error)
             setMessage('Failed to add Blog Post')
