@@ -9,17 +9,20 @@ import Playlists from '../components/Playlists'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+import dbConnect from '../lib/dbConnect'
+import Blog from '../models/Blog'
+
 import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
 
 
 export default function Home({posts, ogImageUrl }) {
   //retreive main header grid data
-  //console.log(posts.data)
+  console.log(posts)
   const [gridPosts, setGridPosts] = useState([])
 
   useEffect(() => {
-    setGridPosts(posts.data.slice(13, 19))
+    setGridPosts(posts.slice(13, 19))
   }, [posts])
 
   return (
@@ -51,7 +54,8 @@ export default function Home({posts, ogImageUrl }) {
         <div className='bg-white dark:bg-slate-900'>
           {/*<Navigation />*/}
           <Sidebar />
-          <LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          <LandingHeader post={posts[2]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
@@ -63,8 +67,22 @@ export default function Home({posts, ogImageUrl }) {
 
 export async function getServerSideProps() {
   //const postsResponse = await axios.get("http://localhost:1337/api/posts") //<---- for local machine
-  const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`).then().catch(err => console.log(err))
+  /*const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`).then().catch(err => console.log(err))*/
   //console.log("data array",postsResponse.data)
+
+  await dbConnect()
+
+  /* find all data in database */
+  const result = await Blog.find({})
+
+  const blogs = result.map((doc) => {
+    const blog = doc.toObject()
+    blog._id = blog._id.toString()
+    blog.date = blog.date.toString()
+    return blog
+  })
+
+  //console.log(blogs)
 
   cloudinary.config({
     cloud_name: 'dbqn6vejg'
@@ -83,7 +101,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      posts: postsResponse.data,
+      posts: blogs,
       //metaPost: postsResponse.data.data[0],
       ogImageUrl: cloudinaryUrl,
     },

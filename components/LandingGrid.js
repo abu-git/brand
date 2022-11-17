@@ -10,7 +10,7 @@ function LandingGrid({posts}) {
     <>
         <div className='mt-8 mb-8 px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {posts.map((post) => {
-                return <LandingGridItem post={post} key={post.id} />
+                return <LandingGridItem post={post} key={post._id} />
             })}
 
 
