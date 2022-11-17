@@ -18,11 +18,11 @@ import Sidebar from '../components/Sidebar'
 
 export default function Home({posts, ogImageUrl }) {
   //retreive main header grid data
-  console.log(posts)
+  //console.log(posts)
   const [gridPosts, setGridPosts] = useState([])
 
   useEffect(() => {
-    setGridPosts(posts.slice(13, 19))
+    setGridPosts(posts.slice(22, 28))
   }, [posts])
 
   return (
@@ -55,7 +55,7 @@ export default function Home({posts, ogImageUrl }) {
           {/*<Navigation />*/}
           <Sidebar />
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
-          <LandingHeader post={posts[2]} />
+          <LandingHeader post={posts[9]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />

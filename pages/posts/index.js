@@ -8,6 +8,9 @@ import PostsGridItem from '../../components/PostsGridItem'
 import axios from 'axios'
 import { motion } from 'framer-motion'
 
+import dbConnect from '../../lib/dbConnect'
+import Blog from '../../models/Blog'
+
 // for deployed app
 //const { NEXT_PUBLIC_STRAPI_API_URL } = process.env || "https://localhost:1337"
 
@@ -17,12 +20,12 @@ function Posts({posts, page, count}) {
 
     const lastPage = Math.ceil(count/7)
 
-    //sorting but not used---if sort doesnt affect post object
-    //ascending a.id -b.id
+    /*sorting but not used if sort doesnt affect post object
+    ascending a.id -b.id
     let temp = posts.data
     let temp2 = temp.sort((a , b) => {
         return b.id - a.id//descending order
-    })
+    })*/
     //console.log(temp2)
     
     return (
@@ -79,8 +82,8 @@ function Posts({posts, page, count}) {
                         
                         
                     </nav>
-                    {posts.data.map((post) => {
-                        return<PostsGridItem post={post} key={post.id}/>
+                    {posts.map((post) => {
+                        return<PostsGridItem post={post} key={post._id}/>
                     })}
                     <nav className='flex justify-between mb-5'>
                         {page > 1 &&
@@ -112,15 +115,30 @@ function Posts({posts, page, count}) {
 export default Posts
 
 export async function getServerSideProps({ query: {page = 1}}) {
+    await dbConnect()
+
+    const options = {
+        page: page,
+        limit: 7
+    }
+
+    const result = await Blog.paginate({}, options)
+    //console.log(result)
+    const blogs = result.docs.map((doc) => {
+        const blog = doc.toObject()
+        blog._id = blog._id.toString()
+        blog.date = blog.date.toString()
+        return blog
+    })
 
     const start = +page === 1 ? 0 : (+page - 1) * 7
     //console.log("start", start)
 
     //const postsResponse = await axios.get("http://localhost:1337/api/posts")//<---- for local machine
     //const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
-    const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=7`)
-    console.log("count is: ", postsResponse.data.meta.pagination.total)
-    console.log("page is: ", page)
+    /*const postsResponse = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?pagination[start]=${start}&pagination[limit]=7`)*/
+    //console.log("count is: ", postsResponse.data.meta.pagination.total)
+    //console.log("page is: ", page)
 
     //postsResponse.data.data.sort()
 
@@ -128,9 +146,9 @@ export async function getServerSideProps({ query: {page = 1}}) {
 
     return {
         props: {
-            posts: postsResponse.data,
-            page: parseInt(page),
-            count: postsResponse.data.meta.pagination.total
+            posts: blogs,
+            page: parseInt(result.page),
+            count: parseInt(result.totalDocs)
         },
     }
 }
