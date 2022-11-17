@@ -17,23 +17,23 @@ function Index ({ blogs, page, count, limit }){
         <h2 className='text-lg font-bold my-10 text-center'>Blog Dashboard</h2>
         <div className='container mx-auto border-2 rounded-md pb-5'>
             <div className='flex justify-between px-6 py-4'>
-                {page > 1 &&
-                    <button className='py-2 px-3 bg-gray-600 hover:bg-gray-800 text-white rounded-md flex' onClick={() => router.push(`/add?page=${page - 1}`)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 pt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                        </svg>
-                        <h3>Previous</h3>
-                    </button>
-                }
                 
-                {page != lastPage &&
-                    <button className='py-2 px-3 bg-gray-600 hover:bg-gray-800 text-white rounded-md flex' onClick={() => router.push(`/add?page=${page + 1}`)}>
-                        <h3>Next</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 pt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                }
+                <button disabled={page <= 1} className='disabled:opacity-50 disabled:hover:bg-gray-800 py-2 px-3 bg-gray-800 hover:bg-gray-900 text-white rounded-md flex' onClick={() => router.push(`/add?page=${page - 1}`)}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 pt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <h3>Previous</h3>
+                </button>
+                
+                
+                
+                <button disabled={page >= lastPage} className='disabled:opacity-50 disabled:hover:bg-gray-800 py-2 px-3 bg-gray-800 hover:bg-gray-900 text-white rounded-md flex' onClick={() => router.push(`/add?page=${page + 1}`)}>
+                    <h3>Next</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 pt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                
                 
             </div>
             <div className='flex flex-col'>
