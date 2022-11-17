@@ -4,10 +4,13 @@ import Blog from '../../models/Blog'
 import { useRouter } from 'next/router'
 
 
-function Index ({ blogs, page, count }){
+function Index ({ blogs, page, count, limit }){
     
     const router = useRouter()
-
+    let countIndex = 0
+    if(page > 1){
+        countIndex =  limit * (page - 1)
+    }
     const lastPage = Math.ceil(count/10)
     return(
     <>
@@ -15,14 +18,20 @@ function Index ({ blogs, page, count }){
         <div className='container mx-auto border-2 rounded-md pb-5'>
             <div className='flex justify-between px-6 py-4'>
                 {page > 1 &&
-                    <button onClick={() => router.push(`/add?page=${page - 1}`)}>
-                        Previous
+                    <button className='py-2 px-3 bg-gray-600 hover:bg-gray-800 text-white rounded-md flex' onClick={() => router.push(`/add?page=${page - 1}`)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 pt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        <h3>Previous</h3>
                     </button>
                 }
                 
                 {page != lastPage &&
-                    <button onClick={() => router.push(`/add?page=${page + 1}`)}>
-                        Next
+                    <button className='py-2 px-3 bg-gray-600 hover:bg-gray-800 text-white rounded-md flex' onClick={() => router.push(`/add?page=${page + 1}`)}>
+                        <h3>Next</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 pt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
                     </button>
                 }
                 
@@ -53,7 +62,8 @@ function Index ({ blogs, page, count }){
                                     {blogs.map((blog, index) => (
                                         <tr key={blog._id} className='bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100'>
                                             <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-900'>
-                                                {index + 1}
+                                                {page === 1 && index + 1}
+                                                {page > 1 && (index + countIndex + 1)}
                                             </td>
                                             <td className='px-6 py-4 whitespace-wrap text-sm text-gray-900'>
                                                 {blog.title}
@@ -99,7 +109,8 @@ export async function getServerSideProps({ query: {page = 1}}){
         props: { 
             blogs: blogs,
             page: parseInt(result.page),
-            count: parseInt(result.totalDocs) 
+            count: parseInt(result.totalDocs), 
+            limit: parseInt(result.limit)
         } 
     }
 }
