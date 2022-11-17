@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import mongoosePaginate from 'mongoose-paginate-v2'
 
 
 const BlogSchema = new mongoose.Schema({
@@ -37,5 +38,8 @@ const BlogSchema = new mongoose.Schema({
         default: Date.now
     }
 })
+
+/* Paginate plugin setup */
+BlogSchema.plugin(mongoosePaginate)
 
 export default mongoose.models.Blog || mongoose.model('Blog', BlogSchema)

@@ -59,8 +59,10 @@ export async function getServerSideProps(){
     await dbConnect()
 
     /* find all data in database */
-    const result = await Blog.find({})
-    const blogs = result.map((doc) => {
+    //const result = await Blog.find({})
+    const result = await Blog.paginate()
+    console.log(result)
+    const blogs = result.docs.map((doc) => {
         const blog = doc.toObject()
         blog._id = blog._id.toString()
         blog.date = blog.date.toString()
