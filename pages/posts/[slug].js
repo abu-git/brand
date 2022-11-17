@@ -124,32 +124,6 @@ const Post = ({post, ogImageUrl}) => {
     )
 }
 
-/*
-export async function getStaticProps({ params: {slug} }) {
-    //const post_res = await axios.get(`http://localhost:1337/api/posts?filters[slug]=${slug}`)
-    const post_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts?filters[slug]=${slug}`)
-    
-    return{
-        props: {
-            post: post_res.data.data[0]
-        }
-    }
-}
-
-export async function getStaticPaths() {
-    //const posts_res = await axios.get("http://localhost:1337/api/posts")
-    const posts_res = await axios.get(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`)
-    const posts = posts_res.data
-
-    return {
-        paths: posts.data.map(post => ({
-            params: { slug: String(post.attributes.slug) }
-        })),
-        fallback: false
-    }
-}
-*/
-
 export async function getServerSideProps({ params: {slug} }){
 
     await dbConnect()
