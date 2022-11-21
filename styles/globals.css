@@ -41,7 +41,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(#ee280e, #15a0f7, #6ed15a);
+    background: linear-gradient(#ee850e, #f7d051, #803707);
     animation: animate7712 1.2s linear infinite;
 }
   
@@ -90,7 +90,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(#ee280e, #15a0f7, #5ad15a);
+    background: linear-gradient(#ee850e, #f7d051, #803707);
 }
   
 .loader:after {
