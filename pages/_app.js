@@ -17,6 +17,7 @@ import { useState, useEffect } from 'react'
 </script>
 */
 
+/* Page Loader settings ----------------------------------*/
 function Loading(){
   const router = useRouter()
   const [loading, setLoading] = useState(false)
