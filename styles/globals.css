@@ -18,6 +18,9 @@
     @apply fill-fuchsia-800;
 }
 
+/*
+    Replaced with tailwindcss in _app.js
+
 .wrapper {
     height: 100vh;
     width: 100vw;
@@ -31,6 +34,7 @@
     z-index: 9999;
   
 }
+*/
 
 .loader {
     position: relative;
