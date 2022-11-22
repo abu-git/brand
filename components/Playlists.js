@@ -13,13 +13,13 @@ function Playlists() {
         </div>
         <section className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 justify-items-center'>
             <div className='bg-white dark:bg-slate-800 px-3 py-5 rounded drop-shadow-lg'>
-                <h4 className='text-lg mb-2 text-orange-500'>#TunesketchPlaylist 1</h4>
-                <iframe style={{borderRadius:6 + 'px'}} src="https://open.spotify.com/embed/playlist/5uYWRefiCaxIhgqIzI0nd5?utm_source=generator" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h4 className='text-lg mb-2 text-rose-600'>Tunesketch Playlist Vol 2</h4>
+                <iframe style={{borderRadius:6 + 'px'}} src="https://open.spotify.com/embed/playlist/249MZ4EnaWJaXWxNmY0VVm?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
 
             <div className='bg-white dark:bg-slate-800 px-3 py-5 rounded drop-shadow-lg'>
-                <h4 className='text-lg mb-2 text-orange-300'>African BoomBap Spotify Playlist 1</h4>
-                <iframe style={{borderRadius:6 + 'px'}} src="https://open.spotify.com/embed/playlist/4d5DN5R75jUXLpSFi5G0gi?utm_source=generator" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <h4 className='text-lg mb-2 text-orange-500'>TunesketchPlaylist Vol 1</h4>
+                <iframe style={{borderRadius:6 + 'px'}} src="https://open.spotify.com/embed/playlist/5uYWRefiCaxIhgqIzI0nd5?utm_source=generator" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
             
             <div className='bg-white dark:bg-slate-800 px-3 py-5 rounded drop-shadow-lg'>
