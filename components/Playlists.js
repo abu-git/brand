@@ -14,7 +14,7 @@ function Playlists() {
         <section className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 justify-items-center'>
             <div className='bg-white dark:bg-slate-800 px-3 py-5 rounded drop-shadow-lg'>
                 <h4 className='text-lg mb-2 text-rose-600'>Tunesketch Playlist Vol 2</h4>
-                <iframe style={{borderRadius:6 + 'px'}} src="https://open.spotify.com/embed/playlist/249MZ4EnaWJaXWxNmY0VVm?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <iframe style={{borderRadius:6 + 'px'}} src="https://open.spotify.com/embed/playlist/249MZ4EnaWJaXWxNmY0VVm?utm_source=generator" width="100%" height="380" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
 
             <div className='bg-white dark:bg-slate-800 px-3 py-5 rounded drop-shadow-lg'>
