@@ -26,8 +26,8 @@ function LandingGridItem({post}) {
                     <button className='flex pt-9 pb-4 pl-3 text-md lg:text-lg text-gray-400 dark:text-gray-500'>
                         <h4>READ MORE</h4>
                         <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pl-2 pb-1 w-7 h-7">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="pl-2 pb-1 w-7 h-7">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
                         </span>
                     </button>
