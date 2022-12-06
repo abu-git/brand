@@ -18,7 +18,7 @@ function Posts({posts, page, count}) {
 
     const router = useRouter()
 
-    const lastPage = Math.ceil(count/7)
+    const lastPage = Math.ceil(count/9)
 
     /*sorting but not used if sort doesnt affect post object
     ascending a.id -b.id
@@ -119,7 +119,7 @@ export async function getServerSideProps({ query: {page = 1}}) {
 
     const options = {
         page: page,
-        limit: 7
+        limit: 9
     }
 
     const result = await Blog.paginate({}, options)
