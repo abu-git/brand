@@ -19,7 +19,7 @@ function About() {
           <meta property="og:type" content="website" />
           <meta property="og:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal." key="ogabouttitle" />
           <meta property="og:description" content="tunesketch | We are a group of African creatives in different places in the world with a common goal. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child." key="ogaboutdesc" />
-          <meta property="og:image" content="https://res.cloudinary.com/dbqn6vejg/image/upload/v1651425549/tunesketchHomeMeta_lmg96b.png" key="ogaboutimg" />
+          <meta property="og:image" content="https://res.cloudinary.com/dbqn6vejg/image/upload/v1672062125/meta-new_gl7o9d.jpg" key="ogaboutimg" />
 
           <meta name="twitter:card" content="summary_large_image" key="twaboutcard"/>
           <meta name="twitter:creator" content="@reachmhp"/>
@@ -28,7 +28,7 @@ function About() {
           <meta property="twitter:url" content="https://www.tunesketch.com/"/>
           <meta name="twitter:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal" key="twabouttitle" />
           <meta name="twitter:description" content="tunesketch | We are a group of African creatives in different places in the world with a common goal. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child." key="twaboutdesc" />
-          <meta name="twitter:image" content="https://res.cloudinary.com/dbqn6vejg/image/upload/v1651425549/tunesketchHomeMeta_lmg96b.png" key="twaboutimg" />
+          <meta name="twitter:image" content="https://res.cloudinary.com/dbqn6vejg/image/upload/v1672062125/meta-new_gl7o9d.jpg" key="twaboutimg" />
         </Head>
         <motion.div 
           exit={{ opacity:0 }}
