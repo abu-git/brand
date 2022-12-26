@@ -41,7 +41,8 @@ export default function Home({posts, ogImageUrl }) {
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:title' content='We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community' />
-        <meta property='twitter:image' content='https://res.cloudinary.com/dbqn6vejg/image/upload/v1653397513/meta_ieuchp.jpg' />
+        <meta property='twitter:image' content='https://res.cloudinary.com/dbqn6vejg/image/upload/v1672062125/meta-new_gl7o9d.jpg' />
+        
         <meta name="twitter:creator" content="@reachmhp"/>
         <meta name="twitter:creator" content="@reachmhp" />
       </Head>
@@ -88,7 +89,7 @@ export async function getServerSideProps() {
     cloud_name: 'dbqn6vejg'
   })
 
-  const cloudinaryUrl = cloudinary.url('meta_ieuchp', {
+  const cloudinaryUrl = cloudinary.url('meta-new_gl7o9d', {
     width: 1012,
     height: 506,
     /*transformation: [
