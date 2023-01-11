@@ -6,29 +6,29 @@ import { FaPlay } from "react-icons/fa"
 import { FaPause } from "react-icons/fa"
 
 const AudioPlayer = () => {
-  // state
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
+    // state
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [duration, setDuration] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
 
-  // references
-  const audioPlayer = useRef();   // reference our audio component
-  const progressBar = useRef();   // reference our progress bar
-  const animationRef = useRef();  // reference the animation
+    // references
+    const audioPlayer = useRef();   // reference our audio component
+    const progressBar = useRef();   // reference our progress bar
+    const animationRef = useRef();  // reference the animation
 
-  useEffect(() => {
-    const seconds = Math.floor(audioPlayer.current.duration);
-    setDuration(seconds);
-    progressBar.current.max = seconds;
-  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
+    useEffect(() => {
+        const seconds = Math.floor(audioPlayer.current.duration);
+        setDuration(seconds);
+        progressBar.current.max = seconds;
+    }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
 
-  const calculateTime = (secs) => {
-    const minutes = Math.floor(secs / 60);
-    const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-    const seconds = Math.floor(secs % 60);
-    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-    return `${returnedMinutes}:${returnedSeconds}`;
-  }
+    const calculateTime = (secs) => {
+        const minutes = Math.floor(secs / 60);
+        const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
+        const seconds = Math.floor(secs % 60);
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${returnedMinutes}:${returnedSeconds}`;
+    }
 
     const togglePlayPause = () => {
         const prevValue = isPlaying;
@@ -43,6 +43,7 @@ const AudioPlayer = () => {
     }
 
     const whilePlaying = () => {
+        if(audioPlayer.current === null) return // fixed break on going to another page
         progressBar.current.value = audioPlayer.current.currentTime;
         changePlayerCurrentTime();
         animationRef.current = requestAnimationFrame(whilePlaying);
@@ -56,6 +57,9 @@ const AudioPlayer = () => {
     const changePlayerCurrentTime = () => {
         progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}%`)
         setCurrentTime(progressBar.current.value);
+        if(currentTime === duration){
+            setIsPlaying(!isPlaying)
+        }
     }
 
     const backThirty = () => {
@@ -69,26 +73,30 @@ const AudioPlayer = () => {
     }
 
   return (
-    <main className='flex justify-center mt-16 pt-4 pb-4 mx-4 bg-white rounded drop-shadow-lg overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-md dark:bg-slate-800 dark:text-gray-100'>
-        <div className={styles.audioPlayer}>
-            <audio ref={audioPlayer} src="/audio/backtalk.mp3" preload="metadata"></audio>
-            <button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>
-            <button onClick={togglePlayPause} className={styles.playPause}>
-                {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
-            </button>
-            <button className={styles.forwardBackward} onClick={forwardThirty}>30 <BsArrowRightShort /></button>
+    <main className='flex flex-col mt-16 pt-4 pb-4 mx-4 dark:text-gray-100'>
+        <h3 className='text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Potor Potor</span> by Odumodublvck feat. Agunna Bu Eze</h3>
+        <div className='flex justify-center ml-6 md:ml-48 lg:ml-72'>
+            <div className={styles.audioPlayer}>
+                <audio ref={audioPlayer} src="/audio/potor.mp3" preload="metadata"></audio>
+                {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
+                <button onClick={togglePlayPause} className={styles.playPause}>
+                    {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
+                </button>
+                {/*<button className={styles.forwardBackward} onClick={forwardThirty}>30 <BsArrowRightShort /></button>*/}
 
-            {/* current time */}
-            <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
+                {/* current time */}
+                <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
 
-            {/* progress bar */}
-            <div>
-                <input type="range" className={styles.progressBar} defaultValue="0" ref={progressBar} onChange={changeRange} />
+                {/* progress bar */}
+                <div>
+                    <input type="range" className={styles.progressBar} defaultValue="0" ref={progressBar} onChange={changeRange} />
+                </div>
+
+                {/* duration */}
+                <div className={styles.duration}>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
             </div>
-
-            {/* duration */}
-            <div className={styles.duration}>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
         </div>
+        
     </main>
     
   )
