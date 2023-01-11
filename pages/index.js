@@ -14,7 +14,7 @@ import Blog from '../models/Blog'
 
 import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
-
+import { AudioPlayer } from '../components/AudioPlayer'
 
 export default function Home({posts, ogImageUrl }) {
   //retreive main header grid data
@@ -56,6 +56,7 @@ export default function Home({posts, ogImageUrl }) {
           {/*<Navigation />*/}
           <Sidebar />
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
+          <AudioPlayer />
           <LandingHeader post={posts[35]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
