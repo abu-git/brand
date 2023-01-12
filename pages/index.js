@@ -39,11 +39,6 @@ export default function Home({posts, ogImageUrl }) {
         <meta property='og:image' content={ogImageUrl} />
         <meta property='og:image:secure_url' content={ogImageUrl} />
         
-        {/* audio meta data */}
-        <meta property="music:musician" content="http://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"/>
-        <meta property="music:album" content="https://open.spotify.com/album/7FkfgH1Ec0RkNSKzOBtwQ4?si=k-NgYytoR2-5IcR3raKL9Q"/>
-        <meta property="music:album:track" content="2"/>
-        <meta property="music:duration" content="188"/>
         {/*<meta property='og:image:width' content="1012" />
         <meta property='og:image:height' content="506" />*/}
         <meta property="og:url" content="https://www.tunesketch.com" />
