@@ -11,6 +11,9 @@ import { motion } from 'framer-motion'
 import dbConnect from '../../lib/dbConnect'
 import Blog from '../../models/Blog'
 
+//whatsap widget setup
+import Whatsapp from '../../components/Whatsapp'
+
 // for deployed app
 //const { NEXT_PUBLIC_STRAPI_API_URL } = process.env || "https://localhost:1337"
 
@@ -106,6 +109,7 @@ function Posts({posts, page, count}) {
                     </nav>
                 </section>
                 <Footer />
+                <Whatsapp />
             </div>
         </motion.div>
     </Layout>

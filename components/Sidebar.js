@@ -92,7 +92,7 @@ function Sidebar() {
                         <a className={router.pathname == "/about" ? "active" : ""}>About</a>
                         </li>
                     </Link>
-                        <li className='py-1 disabled text-slate-500'>Contact</li>
+                        <li className='py-1 disabled text-slate-500'>Buy us coffee</li>
                     </ul>
                 </nav>
             </div>

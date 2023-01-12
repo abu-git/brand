@@ -16,6 +16,10 @@ import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
 import { AudioPlayer } from '../components/AudioPlayer'
 
+
+//whatsap widget setup
+import Whatsapp from '../components/Whatsapp'
+
 export default function Home({posts, ogImageUrl }) {
   //retreive main header grid data
   //console.log(posts)
@@ -54,13 +58,16 @@ export default function Home({posts, ogImageUrl }) {
       >
         <div className='bg-white dark:bg-slate-900'>
           {/*<Navigation />*/}
+          
           <Sidebar />
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <AudioPlayer />
+          
           <LandingHeader post={posts[35]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
+          <Whatsapp />
         </div>
       </motion.div>
     </Layout>

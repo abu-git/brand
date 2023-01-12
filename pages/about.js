@@ -5,6 +5,9 @@ import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
 
+//whatsap widget setup
+import Whatsapp from '../components/Whatsapp'
+
 function About() {
   return (
     <Layout>
@@ -51,6 +54,7 @@ function About() {
                   </div>
               </section>
               <Footer />
+              <Whatsapp />
           </div>
         </motion.div>
       </section>

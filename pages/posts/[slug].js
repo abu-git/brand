@@ -13,6 +13,8 @@ import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 import dbConnect from '../../lib/dbConnect'
 import Blog from '../../models/Blog'
 
+//whatsap widget setup
+import Whatsapp from "../../components/Whatsapp"
 
 
 const Post = ({post, ogImageUrl}) => {
@@ -118,6 +120,7 @@ const Post = ({post, ogImageUrl}) => {
                     </a>
                 </div>
                 <Footer />
+                <Whatsapp />
             </div>
         </motion.div>
         </Layout>
