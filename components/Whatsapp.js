@@ -5,7 +5,10 @@ import React from 'react'
 
 function Whatsapp() {
   return (
-    <WhatsAppWidget phoneNumber="27832459000" message="Hello! 👋🏼 What can we do for you?" />
+    <div className='dark:text-black'>
+        <WhatsAppWidget phoneNumber="27832459000" message="Hello! 👋🏼 What can we do for you?" />
+    </div>
+    
   )
 }
 
