@@ -77,7 +77,7 @@ const AudioPlayer = () => {
         <h3 className='text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Potor Potor</span> by Odumodublvck feat. Agunna Bu Eze</h3>
         <div className='flex justify-center ml-6 md:ml-48 lg:ml-72'>
             <div className={styles.audioPlayer}>
-                <audio ref={audioPlayer} src="/audio/potor.mp3" preload="metadata"></audio>
+                <audio ref={audioPlayer} src="/audio/potor.mp3" type="audio/mpeg" preload="auto"></audio>
                 {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
                 <button onClick={togglePlayPause} className={styles.playPause}>
                     {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
