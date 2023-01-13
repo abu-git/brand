@@ -38,7 +38,7 @@ export default function Home({posts, ogImageUrl }) {
         <meta property="og:description" content='tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art.' />
         <meta property='og:image' content={ogImageUrl} />
         <meta property='og:image:secure_url' content={ogImageUrl} />
-        
+
         {/*<meta property='og:image:width' content="1012" />
         <meta property='og:image:height' content="506" />*/}
         <meta property="og:url" content="https://www.tunesketch.com" />
