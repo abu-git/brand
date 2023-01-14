@@ -74,7 +74,7 @@ const AudioPlayer = () => {
 
   return (
     <main className='flex flex-col mt-16 pt-4 pb-4 mx-4 dark:text-gray-100'>
-        <h3 className='text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Balling</span> by Ex'O</h3>
+        <h3 className='text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Balling</span> by Ex&apos;O</h3>
         <div className='flex justify-center ml-6 md:ml-48 lg:ml-72'>
             <div className={styles.audioPlayer}>
                 <audio ref={audioPlayer} src="/audio/sotd.mp3" type="audio/mpeg" preload="auto"></audio>
