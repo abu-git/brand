@@ -21,7 +21,7 @@ function Posts({posts, page, count}) {
 
     const router = useRouter()
 
-    const lastPage = Math.ceil(count/9)
+    const lastPage = Math.ceil(count/10)
 
     /*sorting but not used if sort doesnt affect post object
     ascending a.id -b.id
@@ -123,7 +123,7 @@ export async function getServerSideProps({ query: {page = 1}}) {
 
     const options = {
         page: page,
-        limit: 9
+        limit: 10
     }
 
     const result = await Blog.paginate({}, options)
@@ -135,7 +135,7 @@ export async function getServerSideProps({ query: {page = 1}}) {
         return blog
     })
 
-    const start = +page === 1 ? 0 : (+page - 1) * 7
+    //const start = +page === 1 ? 0 : (+page - 1) * 9
     //console.log("start", start)
 
     //const postsResponse = await axios.get("http://localhost:1337/api/posts")//<---- for local machine
