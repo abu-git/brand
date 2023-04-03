@@ -123,7 +123,7 @@ export async function getServerSideProps({ query: {page = 1}}) {
 
     const options = {
         page: page,
-        limit: 10
+        limit: 11
     }
 
     const result = await Blog.paginate({}, options)
