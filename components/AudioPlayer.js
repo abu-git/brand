@@ -74,10 +74,10 @@ const AudioPlayer = () => {
 
   return (
     <main className='flex flex-col mt-16 pt-4 pb-4 mx-4 dark:text-gray-100'>
-        <h3 className='text-md md:text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Find Me In The Music</span> by Jedi Knight, Garth Soul</h3>
+        <h3 className='text-md md:text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Journey&apos;s End</span> by Vokulz</h3>
         <div className='flex justify-center ml-6 md:ml-48 lg:ml-72'>
             <div className={styles.audioPlayer}>
-                <audio ref={audioPlayer} src="/audio/sotd-jedi.mp3" type="audio/mpeg" preload="auto"></audio>
+                <audio ref={audioPlayer} src="/audio/sotd-vokulz.mp3" type="audio/mpeg" preload="auto"></audio>
                 {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
                 <button onClick={togglePlayPause} className={styles.playPause}>
                     {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
