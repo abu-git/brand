@@ -21,7 +21,7 @@ function Posts({posts, page, count}) {
 
     const router = useRouter()
 
-    const lastPage = Math.ceil(count/10)
+    const lastPage = Math.ceil(count/11)
 
     /*sorting but not used if sort doesnt affect post object
     ascending a.id -b.id
