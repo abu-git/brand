@@ -86,7 +86,7 @@ const Post = ({post, ogImageUrl}) => {
                             <h3 className="text-2xl lg:text-5xl font-extrabold text-black dark:text-white text-center mb-5 px-8">{post.title}</h3>
                             <h3 className="text-lg lg:text-2xl font-light text-black dark:text-white text-center mb-5 px-8">published: {(new Date(post.date)).toDateString()}</h3>
                         </div>
-                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 md:mx-24 lg:mx-48 px-4 py-5 text-center">
+                        <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 md:mx-24 lg:mx-60 px-4 py-5 text-center">
                             <Image 
                                 src={`/${post.gridImage}`}
                                 width={300}
@@ -97,7 +97,7 @@ const Post = ({post, ogImageUrl}) => {
                         </div>
                     
                 </section>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3  mt-5 md:mb-32 mx-6 md:mx-24 lg:mx-48">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3  mt-5 md:mb-32 mx-6 md:mx-24 lg:mx-60">
                     <a target="_blank" href={post.youtube} rel="noreferrer">
                         <div className="bg-white dark:bg-slate-800 py-5 px-3 rounded-md shadow-md hover:shadow-lg flex justify-center cursor-pointer">
                             <h5 className="text-md font-thin text-black dark:text-white">YouTube</h5>
