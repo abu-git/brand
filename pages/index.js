@@ -26,7 +26,7 @@ export default function Home({posts, ogImageUrl }) {
   const [gridPosts, setGridPosts] = useState([])
 
   useEffect(() => {
-    setGridPosts(posts.slice(38, 44))
+    setGridPosts(posts.slice(39, 45))
   }, [posts])
 
   return (
