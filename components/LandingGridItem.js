@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function LandingGridItem({post}) {
 
     
     return (
         <Link href={`/posts/${post.slug}`} passHref>
-            <div className='flex flex-col cursor-pointer bg-white rounded drop-shadow-md overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-xl dark:bg-slate-800 dark:text-gray-100'>
+            <motion.div 
+                initial={{ y: 30 ,opacity: 0.2 }}
+                whileInView={{ y:0, opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                className='flex flex-col cursor-pointer bg-white rounded drop-shadow-md overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-xl dark:bg-slate-800 dark:text-gray-100'>
                 <div className='relative'>
                     <Image 
                         width={433}
@@ -33,7 +38,7 @@ function LandingGridItem({post}) {
                     </button>
                 </div>
                 
-            </div>
+            </motion.div>
         </Link>
     )
 }

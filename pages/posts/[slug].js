@@ -10,6 +10,7 @@ import axios from 'axios'
 import { motion } from 'framer-motion'
 import { ArrowNarrowLeftIcon } from '@heroicons/react/solid'
 
+
 import dbConnect from '../../lib/dbConnect'
 import Blog from '../../models/Blog'
 
@@ -67,11 +68,7 @@ const Post = ({post, ogImageUrl}) => {
                 <meta name="twitter:description" content={post.description}  />
                 <meta name="twitter:image" content={ogImageUrl} />
             </Head>
-        <motion.div 
-        exit={{ opacity:0 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        >
+        <div>
             <div className='bg-white dark:bg-slate-900'>
                 <Sidebar />
                 <div className="flex items-center mt-5 ml-6">
@@ -83,17 +80,36 @@ const Post = ({post, ogImageUrl}) => {
                 </div>
                 <section className="flex flex-col mt-2 mx-auto">
                         <div className="mx-8 lg:mx-16">
-                            <h3 className="text-2xl lg:text-5xl font-extrabold text-black dark:text-white text-center mb-5 px-8">{post.title}</h3>
-                            <h3 className="text-lg lg:text-2xl font-light text-black dark:text-white text-center mb-5 px-8">published: {(new Date(post.date)).toDateString()}</h3>
+                            <motion.h3 
+                                initial={{ y:30 , opacity: 0 }}
+                                whileInView={{ y:0, opacity: 1}}
+                                transition={{ delay: 1.3 }}
+                                className="text-2xl lg:text-5xl font-extrabold text-black dark:text-white text-center mb-5 px-8">{post.title}</motion.h3>
+                            <motion.h3 
+                                initial={{ y:-30 , opacity: 0 }}
+                                whileInView={{ y:0, opacity: 1}}
+                                transition={{ delay: 1.3 }}
+                                className="text-lg lg:text-2xl font-light text-black dark:text-white text-center mb-5 px-8">published: {(new Date(post.date)).toDateString()}</motion.h3>
                         </div>
                         <div className="bg-white dark:bg-slate-800 rounded-md drop-shadow-lg mx-6 md:mx-24 lg:mx-60 px-4 py-5 text-center">
-                            <Image 
-                                src={`/${post.gridImage}`}
-                                width={300}
-                                height={300}
-                                alt={post.title}
-                            />
-                            <p className="text-xl text-black dark:text-white lg:text-3xl text-justify pt-3">{post.content}</p>
+                            <motion.div
+                                initial={{ y:30, opacity: 0}}
+                                whileInView={{ y: 0, opacity: 1}}
+                                transition={{ delay: 1.5 }}
+                            >
+                                <Image 
+                                    src={`/${post.gridImage}`}
+                                    width={300}
+                                    height={300}
+                                    alt={post.title}
+                                />
+                            </motion.div>
+                            
+                            <motion.p 
+                                initial={{ y:-30, opacity: 0}}
+                                whileInView={{ y: 0, opacity: 1}}
+                                transition={{ delay: 1.5 }}
+                                className="text-xl text-black dark:text-white lg:text-3xl text-justify pt-3">{post.content}</motion.p>
                         </div>
                     
                 </section>
@@ -122,7 +138,7 @@ const Post = ({post, ogImageUrl}) => {
                 <Footer />
                 <Whatsapp />
             </div>
-        </motion.div>
+        </div>
         </Layout>
     )
 }
