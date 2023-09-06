@@ -6,7 +6,9 @@ Open [Brand. | Homepage](http://brand-kappa.vercel.app/) with your browser to se
 
 This is a githun repo of the frontend of this application. It is deployed on Vercel. 
 
-The backend uses the headless CMS framework known as Strapi with a PostgreSQL database. It is deployed on Heroku.
+The backend uses the headless CMS framework known as Strapi with a PostgreSQL database. It is deployed on Heroku. (Version 1)
+
+The backend was moved to MongoDB (Version 2)
 
 ## About 
 
