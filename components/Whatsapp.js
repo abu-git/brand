@@ -1,14 +1,21 @@
-import { WhatsAppWidget } from 'react-whatsapp-widget'
-import 'react-whatsapp-widget/dist/index.css'
-
 import React from 'react'
+// Whatsapp widget (updated)
+import { FloatingWhatsApp } from "react-floating-whatsapp"
 
 function Whatsapp() {
   return (
-    <div className='dark:text-black'>
-        <WhatsAppWidget phoneNumber="27832459000" message="Hello! 👋🏼 What can we do for you?" />
-    </div>
-    
+      <div className="">
+          <FloatingWhatsApp
+              phoneNumber="27832459000"
+              accountName="Tunesketch Support (Sam)"
+              avatar='/favicon/android-chrome-512x512.png'
+              chatMessage="Hi there! 👋🏼 How can I help?"
+              allowEsc
+              allowClickAway
+              notification
+              notificationSound
+          />
+      </div>
   )
 }
 
