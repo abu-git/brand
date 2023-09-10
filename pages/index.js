@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { v2 as cloudinary } from 'cloudinary'
 import axios from 'axios'
-import Navigation from '../components/Navigation2'
+//import Navigation from '../components/Navigation2'
 import LandingHeader from '../components/LandingHeader'
 import LandingGrid from '../components/LandingGrid'
 import Footer from '../components/Footer'
