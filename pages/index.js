@@ -26,7 +26,7 @@ export default function Home({posts, ogImageUrl }) {
   const [gridPosts, setGridPosts] = useState([])
 
   useEffect(() => {
-    setGridPosts(posts.slice(64, 70))
+    setGridPosts(posts.slice(65, 71))
   }, [posts])
 
   return (
@@ -64,7 +64,7 @@ export default function Home({posts, ogImageUrl }) {
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <AudioPlayer />
           
-          <LandingHeader post={posts[13]} />
+          <LandingHeader post={posts[38]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />

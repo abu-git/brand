@@ -73,38 +73,38 @@ const AudioPlayer = () => {
         changeRange();
     }
 
-  return (
-    <main className='flex flex-col mt-16 pt-4 pb-4 mx-4 dark:text-gray-100'>
-        <motion.h3 
-            initial={{ y:-30 ,opacity: 0}}
-            whileInView={{ y: 0, opacity: 1}}
-            transition={{ delay: 0.4 }}
-            className='text-md md:text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">The Word</span> by Illgod x Timi Kei</motion.h3>
-        <div className='flex justify-center ml-6 md:ml-48 lg:ml-80'>
-            <div className={styles.audioPlayer}>
-                <audio ref={audioPlayer} src="/audio/sotd-word.mp3" type="audio/mpeg" preload="auto"></audio>
-                {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
-                <button onClick={togglePlayPause} className={styles.playPause}>
-                    {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
-                </button>
-                {/*<button className={styles.forwardBackward} onClick={forwardThirty}>30 <BsArrowRightShort /></button>*/}
+    return (
+        <main className='flex flex-col mt-16 pt-4 pb-4 mx-4 dark:text-gray-100'>
+            <motion.h3 
+                initial={{ y:-30 ,opacity: 0}}
+                whileInView={{ y: 0, opacity: 1}}
+                transition={{ delay: 0.4 }}
+                className='text-md md:text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">The Word</span> by Illgod x Timi Kei</motion.h3>
+            <div className='flex justify-center ml-6 md:ml-48 lg:ml-80'>
+                <div className={styles.audioPlayer}>
+                    <audio ref={audioPlayer} src="/audio/sotd-word.mp3" type="audio/mpeg" preload="auto"></audio>
+                    {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
+                    <button onClick={togglePlayPause} className={styles.playPause}>
+                        {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
+                    </button>
+                    {/*<button className={styles.forwardBackward} onClick={forwardThirty}>30 <BsArrowRightShort /></button>*/}
 
-                {/* current time */}
-                <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
+                    {/* current time */}
+                    <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
 
-                {/* progress bar */}
-                <div>
-                    <input type="range" className={styles.progressBar} defaultValue="0" ref={progressBar} onChange={changeRange} />
+                    {/* progress bar */}
+                    <div>
+                        <input type="range" className={styles.progressBar} defaultValue="0" ref={progressBar} onChange={changeRange} />
+                    </div>
+
+                    {/* duration */}
+                    <div className={styles.duration}>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
                 </div>
-
-                {/* duration */}
-                <div className={styles.duration}>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
             </div>
-        </div>
+            
+        </main>
         
-    </main>
-    
-  )
+    )
 }
 
 export { AudioPlayer }
