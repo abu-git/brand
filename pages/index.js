@@ -20,7 +20,7 @@ import { AudioPlayer } from '../components/AudioPlayer'
 //whatsap widget setup
 import Whatsapp from '../components/Whatsapp'
 
-export default function Home({posts, ogImageUrl }) {
+export default function Home({ posts, ogImageUrl }) {
   //retreive main header grid data
   //console.log(posts)
   const [gridPosts, setGridPosts] = useState([])
@@ -64,7 +64,7 @@ export default function Home({posts, ogImageUrl }) {
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <AudioPlayer />
           
-          <LandingHeader post={posts[64]} />
+          <LandingHeader post={posts[71]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
