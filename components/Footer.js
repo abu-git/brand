@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 
 function Footer() {
@@ -36,9 +37,16 @@ function Footer() {
         </div>
     </footer>
     <div className='flex justify-center'>
-        <h4 className='text-md font-light text-black dark:text-white pb-5'>
-            ©2023 Design by <a href="https://sam-cv.vercel.app/"><span className='bg-clip-text text-transparent bg-gradient-to-l from-amber-200 to-yellow-900 cursor-pointer'>Samuel Abu</span></a>
-        </h4>
+        <div className='flex flex-col items-center'>
+            <Link href="/privacy" passHref>
+                <h4 className='font-semibold pb-8 cursor-pointer'>Privacy Policy</h4>
+            </Link>
+            
+            <h4 className='text-md font-light text-black dark:text-white pb-5'>
+                ©2023 Design by <a href="https://sam-cv.vercel.app/"><span className='bg-clip-text text-transparent bg-gradient-to-l from-amber-200 to-yellow-900 cursor-pointer'>Samuel Abu</span></a>
+            </h4>
+        </div>
+        
     </div>
     </div>
   )
