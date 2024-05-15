@@ -63,7 +63,7 @@ export default function Home({ posts, ogImageUrl }) {
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <AudioPlayer />
           
-          <LandingHeader post={posts[80]} />
+          <LandingHeader post={posts[14]} />
           <LandingGrid posts={gridPosts} />
           <Playlists />
           <Footer />
