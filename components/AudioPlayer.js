@@ -79,10 +79,10 @@ const AudioPlayer = () => {
                 initial={{ y:-30 ,opacity: 0}}
                 whileInView={{ y: 0, opacity: 1}}
                 transition={{ delay: 0.4 }}
-                className='text-md md:text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Smoke</span> by Psalmurai feat. Noon</motion.h3>
+                className='text-md md:text-lg font-semibold text-center pb-2'>Song of the Day - <span className="font-bold text-amber-600">Send iPin</span> by Arsenic Beats &amp; Supah Mpondo</motion.h3>
             <div className='flex justify-center ml-6 md:ml-48 lg:ml-80'>
                 <div className={styles.audioPlayer}>
-                    <audio ref={audioPlayer} src="/audio/sotd-noon.mp3" type="audio/mpeg" preload="auto"></audio>
+                    <audio ref={audioPlayer} src="/audio/sotd-supah.mp3" type="audio/mpeg" preload="auto"></audio>
                     {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
                     <button onClick={togglePlayPause} className={styles.playPause}>
                         {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
