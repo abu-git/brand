@@ -38,7 +38,7 @@ function Loading(){
   })
 
   return loading && (
-    <div className='h-[100vh] w-[100vw] flex justify-center items-center fixed top-0 left-0 bg-slate-50 dark:bg-slate-900 z-[9999]'>
+    <div className='h-[100vh] w-[100vw] flex justify-center items-center fixed top-0 left-0 bg-slate-50 dark:bg-black z-[9999]'>
       <div className="loader">
         <span></span>
         <span></span>

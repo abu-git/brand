@@ -15,7 +15,7 @@ function LandingHeader({post}) {
                 initial={{ y:30, opacity: 0 }}
                 whileInView={{y:0, opacity: 1}}
                 transition={{ delay: 0.5 }}
-                className='flex justify-between bg-white rounded overflow-hidden shadow-lg hover:shadow-xl cursor-pointer dark:bg-slate-800 dark:text-gray-100'>
+                className='flex justify-between bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl cursor-pointer dark:bg-black dark:text-gray-100'>
                 <div className="sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl lg:w-1/2 xl:w-1/2 2xl:w-9/12 font-extrabold flex items-center ...">
                     <h1 className="bg-clip-text text-transparent bg-gradient-to-l from-amber-200 to-yellow-900 px-5 py-3 self-center text-left  tracking-tighter">
                     {/* Header retrieved from database */}

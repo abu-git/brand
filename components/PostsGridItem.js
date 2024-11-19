@@ -6,7 +6,7 @@ function PostsGridItem({post}) {
     //console.log(post.attributes)
     return (
         <Link href={`/posts/${post.slug}`} passHref>
-            <div className='flex bg-white rounded drop-shadow-lg overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-xl dark:bg-slate-800 mb-4 lg:mb-7 max-h-96 cursor-pointer'>
+            <div className='flex bg-white rounded drop-shadow-lg overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-xl dark:bg-black mb-4 lg:mb-7 max-h-96 cursor-pointer'>
                 <div className='w-1/3 brightness-75'> 
                     <Image
                         width={20}

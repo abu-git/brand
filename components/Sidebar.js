@@ -38,7 +38,7 @@ function Sidebar() {
     }
 
     return (
-        <div className='py-4 px-8 rounded shadow-md bg-white dark:bg-slate-900 dark:text-gray-100 fixed top-0 z-10 w-full'>
+        <div className='py-4 px-8 rounded shadow-md bg-white dark:bg-black dark:text-gray-100 fixed top-0 z-10 w-full'>
             <nav className='flex justify-between items-center'>
                 {/* Logo  */}
                 <Link href="/" passHref>
@@ -66,7 +66,7 @@ function Sidebar() {
                 }
             </nav>
 
-            <div className={`top-0 right-0 w-[380px] bg-slate-200 dark:bg-slate-800 dark:text-gray-100  p-10 pl-20 fixed h-full z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full"}`}>
+            <div className={`top-0 right-0 w-[380px] bg-slate-200 dark:bg-neutral-900 dark:text-gray-100  p-10 pl-20 fixed h-full z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0 " : "translate-x-full"}`}>
                 <nav>
                     <div className='flex justify-end'>
                         <button onClick={() => setShowSidebar(!showSidebar)}>

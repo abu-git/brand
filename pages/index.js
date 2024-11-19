@@ -57,7 +57,7 @@ export default function Home({ posts, ogImageUrl }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <div className='dark:bg-slate-900 bg-slate-100'>
+        <div className='dark:bg-zinc-900 bg-slate-100'>
           
           <Sidebar />
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}

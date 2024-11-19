@@ -38,9 +38,9 @@ export default function PrivacyPolicy(){
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
             >
-                <div className='bg-white dark:bg-slate-900 text-black dark:text-white'>
+                <div className='bg-slate-100 dark:bg-zinc-900 text-black dark:text-white'>
                     {/* Navigation */}
-                    <div className='bg-white dark:bg-slate-900 fixed top-0 z-30 px-6 md:px-12 py-5 rounded-sm drop-shadow-lg w-full'>
+                    <div className='bg-white dark:bg-black fixed top-0 z-30 px-6 md:px-12 py-5 rounded-sm drop-shadow-lg w-full'>
                         <nav>
                             <div>
                                 <button className='flex items-center w-1/2 md:w-1/4 cursor-pointer' onClick={() => router.back()}>
@@ -59,7 +59,7 @@ export default function PrivacyPolicy(){
                     </div>
 
                     <main className='pt-20 px-6 md:px-12'>
-                        <h1 className='text-xl md:text-2xl font-semibold'>Privacy Policy</h1>
+                        <h1 className='text-xl md:text-2xl font-semibold pt-5'>Privacy Policy</h1>
 
                         <p className='mt-6 text-lg font-semibold'>Last updated: April 18, 2024</p>
 

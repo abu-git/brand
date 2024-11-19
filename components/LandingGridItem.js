@@ -12,7 +12,7 @@ function LandingGridItem({post}) {
                 initial={{ y: 30 ,opacity: 0.2 }}
                 whileInView={{ y:0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className='flex flex-col cursor-pointer bg-white rounded drop-shadow-md overflow-hidden md:rounded md:drop-shadow-md hover:drop-shadow-xl dark:bg-slate-800 dark:text-gray-100'>
+                className='flex flex-col cursor-pointer bg-white rounded-md drop-shadow-md overflow-hidden md:rounded-lg md:drop-shadow-md hover:drop-shadow-xl dark:bg-black dark:text-gray-100'>
                 <div className='relative'>
                     <Image 
                         width={433}
