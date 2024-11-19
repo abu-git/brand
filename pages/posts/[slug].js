@@ -69,7 +69,7 @@ const Post = ({post, ogImageUrl}) => {
                 <meta name="twitter:image" content={ogImageUrl} />
             </Head>
         <div>
-            <div className='bg-white dark:bg-slate-900'>
+            <div className='bg-slate-100 dark:bg-slate-900'>
                 <Sidebar />
                 <div className="flex items-center mt-5 ml-6">
                     {/*<Link href="/posts" passHref>*/}

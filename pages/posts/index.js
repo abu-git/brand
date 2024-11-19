@@ -62,7 +62,7 @@ function Posts({posts, page, count}) {
         >  
             <div className='bg-white dark:bg-slate-900'>
                 <Sidebar />
-                <section className='mt-14 mb-24 px-6 lg:px-96 flex flex-col bg-white dark:bg-slate-900'>
+                <section className='mt-14 mb-24 px-6 lg:px-96 flex flex-col bg-slate-100 dark:bg-slate-900'>
                     <h2 className='mb-5 mt-3 p-2 md:text-xl text-md font-semibold text-black dark:text-white'>All Reviews - pg.{page}</h2>
                     <nav className='flex justify-between mb-5'>
                         {page > 1 &&
