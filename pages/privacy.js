@@ -45,10 +45,10 @@ export default function PrivacyPolicy(){
                             <div>
                                 <button className='flex items-center w-1/2 md:w-1/4 cursor-pointer' onClick={() => router.back()}>
                                     <Image
-                                        src='/favicon/favicon-32x32.png'
+                                        src='/favicon/christmas/favicon-32x32.png'
                                         width={35}
                                         height={35}
-                                        alt='adsolute capital logo'
+                                        alt='tunesketch logo'
                                         className='cursor-pointer'
                                     />
                                     <h3 className='sm:text-md md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-amber-200 to-yellow-900 pl-1'>tunesketch</h3>
