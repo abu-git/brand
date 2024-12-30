@@ -80,11 +80,11 @@ const AudioPlayer = () => {
                 whileInView={{ y: 0, opacity: 1}}
                 transition={{ delay: 0.4 }}
                 className='text-md md:text-lg font-semibold text-center pb-2'>
-                    Song of the Day - <span className="font-bold text-amber-600">Botsoso (feat. Lady Du)</span> by Priddy Ugly
+                    Song of the Day - <span className="font-bold text-amber-600">Find Me In The Music</span> by Jedi Knight &amp; Garth Soul
             </motion.h3>
             <div className='flex justify-center ml-6 md:ml-48 lg:ml-80'>
                 <div className={styles.audioPlayer}>
-                    <audio ref={audioPlayer} src="/audio/sotd-priddy.mp3" type="audio/mpeg" preload="auto"></audio>
+                    <audio ref={audioPlayer} src="/audio/sotd-jedi.mp3" type="audio/mpeg" preload="auto"></audio>
                     {/*<button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>*/}
                     <button onClick={togglePlayPause} className={styles.playPause}>
                         {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
