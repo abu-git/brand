@@ -44,7 +44,7 @@ function Sidebar() {
                     </a>*/}
                     <div className='flex items-center w-2/5 md:w-1/4 cursor-pointer'>
                         <Image
-                            src='/favicon/christmas/favicon-32x32.png'
+                            src='/favicon/favicon-32x32.png'
                             width={35}
                             height={35}
                             alt='tunesketch logo'
