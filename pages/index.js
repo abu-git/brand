@@ -15,6 +15,7 @@ import Blog from '../models/Blog'
 import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
 import { AudioPlayer } from '../components/AudioPlayer'
+import AndroidPromo from '../components/AndroidPromo'
 
 
 //whatsap widget setup
@@ -63,8 +64,10 @@ export default function Home({ posts, ogImageUrl }) {
           <AudioPlayer />
           
           <LandingHeader post={posts[135]} />
+          <AndroidPromo />
           <LandingGrid posts={gridPosts} />
           <Playlists />
+          
           <Footer />
           <Whatsapp />
         </div>

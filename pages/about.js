@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 
 //whatsap widget setup
 import Whatsapp from '../components/Whatsapp'
+import AndroidPromo from '../components/AndroidPromo'
 
 function About() {
   return (
@@ -40,7 +41,7 @@ function About() {
         >
           <div className='bg-slate-100 dark:bg-zinc-900'>
               <Sidebar />
-              <section className='bg-slate-100 dark:bg-zinc-900 md:mx-20 md:mb-56 lg:mb-56 lg:mx-48 pt-20 lg:pt-24 px-6 grid grid-cols-1 md:grid-cols-2 '>
+              <section className='bg-slate-100 dark:bg-zinc-900 md:mx-20 lg:mx-48 pt-20 lg:pt-24 px-6 grid grid-cols-1 md:grid-cols-2 '>
                   {/*--- Left Div on big screens Top Div on small screens ---*/}
                   <div className='dark:bg-zinc-900 md:text-5xl lg:text-6xl text-4xl font-bold text-right text-black dark:text-white mt-4 pr-5 pb-5 '>
                       <h1>We are a group of African creatives in different places in the world with a common goal to create and give back to the creative community. This is one of our contributions.</h1>
@@ -53,6 +54,7 @@ function About() {
                       <h4 className='text-2xl font-light'>Hopefully, we can give voice to the unheard and inspire the young one. Stay with us on this journey.</h4>
                   </div>
               </section>
+              <AndroidPromo />
               <Footer />
               <Whatsapp />
           </div>

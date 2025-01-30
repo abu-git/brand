@@ -16,6 +16,7 @@ import Blog from '../../models/Blog'
 
 //whatsap widget setup
 import Whatsapp from "../../components/Whatsapp"
+import AndroidPromo from "../../components/AndroidPromo"
 
 
 const Post = ({post, ogImageUrl}) => {
@@ -147,6 +148,7 @@ const Post = ({post, ogImageUrl}) => {
                         </motion.div>
                     </a>
                 </div>
+                <AndroidPromo />
                 <Footer />
                 <Whatsapp />
             </div>

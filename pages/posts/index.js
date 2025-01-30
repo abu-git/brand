@@ -13,6 +13,7 @@ import Blog from '../../models/Blog'
 
 //whatsap widget setup
 import Whatsapp from '../../components/Whatsapp'
+import AndroidPromo from '../../components/AndroidPromo'
 
 // for deployed app
 //const { NEXT_PUBLIC_STRAPI_API_URL } = process.env || "https://localhost:1337"
@@ -108,6 +109,7 @@ function Posts({posts, page, count}) {
                         }
                     </nav>
                 </section>
+                <AndroidPromo />
                 <Footer />
                 <Whatsapp />
             </div>
