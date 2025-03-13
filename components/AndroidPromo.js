@@ -13,7 +13,7 @@ function AndroidPromo() {
                         initial={{x:-30, opacity: 0}}
                         whileInView={{x:0, opacity: 1}}
                         transition={{delay: 0.7}}
-                        className='text-black dark:text-white text-md md:text-xl xl:text-2xl justify-center px-3 text-center py-2'>
+                        className='text-black dark:text-white text-md md:text-lg xl:text-2xl justify-center px-3 text-center py-2'>
                         tunesketch is now available on Android devices
                     </motion.h3>
                     <a href='https://play.google.com/store/apps/details?id=com.abu.sammie.tunesketch18&pcampaignid=web_share' target='_blank' rel='noreferrer'>
