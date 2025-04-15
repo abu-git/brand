@@ -63,7 +63,7 @@ export default function Home({ posts, ogImageUrl }) {
           {/*<LandingHeader post={posts.data[2].attributes} />{/* -----------> Header post is chosen directly using its id */}
           <AudioPlayer />
           
-          <LandingHeader post={posts[133]} />
+          <LandingHeader post={posts[143]} />
           <AndroidPromo />
           <LandingGrid posts={gridPosts} />
           <Playlists />
