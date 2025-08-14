@@ -80,7 +80,7 @@ const AudioPlayer = () => {
                 whileInView={{ y: 0, opacity: 1}}
                 transition={{ delay: 0.4 }}
                 className='text-md md:text-lg font-semibold text-center pb-2'>
-                    Song of the Day - <span className="font-bold text-amber-600">Cranberry Juice (feat. Keema X)</span> by Mxps Rellington &amp; Rapsom'
+                    Song of the Day - <span className="font-bold text-amber-600">Cranberry Juice (feat. Keema X)</span> by Mxps Rellington &amp; Rapsom&apos;
             </motion.h3>
             <div className='flex justify-center ml-6 md:ml-48 lg:ml-80'>
                 <div className={styles.audioPlayer}>
