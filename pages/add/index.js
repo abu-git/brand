@@ -11,7 +11,7 @@ function Index ({ blogs, page, count, limit }){
     if(page > 1){
         countIndex =  limit * (page - 1)
     }
-    const lastPage = Math.ceil(count/10)
+    const lastPage = Math.ceil(count/15)
     return(
     <>
         <h2 className='text-lg font-bold my-10 text-center'>Blog Dashboard</h2>
@@ -95,7 +95,7 @@ export async function getServerSideProps({ query: {page = 1}}){
     /* find all data in database */
     //const result = await Blog.find({})
 
-    const options = { page: page, limit: 10 }
+    const options = { page: page, limit: 15 }
     const result = await Blog.paginate({}, options)
     //console.log(result.page)
     const blogs = result.docs.map((doc) => {
