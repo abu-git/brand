@@ -40,7 +40,7 @@ function Posts({posts, page, count}) {
 
 
             {/* Social media meta tags */}
-            <meta property="og:url" content="https://tunesketch.com" />
+            <meta property="og:url" content="https://tunesketch.app" />
             <meta property="og:type" content="website" />
             <meta property="og:title" content="These are our short articles and reviews of some dope african music" key="ogpoststitle" />
             <meta property="og:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent and worldwide. We aim to cover a large spectrum of music genres and art." key="ogpostsdesc" />
@@ -49,8 +49,8 @@ function Posts({posts, page, count}) {
             <meta name="twitter:card" content="summary_large_image" key="twcard"></meta>
             <meta name="twitter:creator" content="@reachmhp"/>
             <meta name="twitter:creator" content="@reachmhp" />
-            <meta property="twitter:domain" content="tunesketch.com"/>
-            <meta property="twitter:url" content="https://www.tunesketch.com/"/>
+            <meta property="twitter:domain" content="tunesketch.app"/>
+            <meta property="twitter:url" content="https://www.tunesketch.app/"/>
             <meta name="twitter:title" content="These are our short articles and reviews of some dope african music" key="twpoststitle" />
             <meta name="twitter:description" content="tunesketch is a media company that aims to highlight the works of young, hard-working and deserving creatives from the continent. We aim to cover a large spectrum of music genres and art." key="twpostsdesc"  />
             <meta name="twitter:image" content="/meta.jpg" key="twpostsimg"/>
