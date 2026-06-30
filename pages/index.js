@@ -42,7 +42,7 @@ export default function Home({ posts, ogImageUrl }) {
 
         {/*<meta property='og:image:width' content="1012" />
         <meta property='og:image:height' content="506" />*/}
-        <meta property="og:url" content="https://www.tunesketch.com" />
+        <meta property="og:url" content="https://tunesketch.app" />
         <meta property="og:type" content="website" />
 
         <meta property='twitter:card' content='summary_large_image' />
