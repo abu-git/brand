@@ -19,7 +19,7 @@ function About() {
           {/*<link rel="manifest" href="/favicon/favicon/site.webmanifest"/>*/}
 
           {/* Social media meta tags */}
-          <meta property="og:url" content="https://tunesketch.com" />
+          <meta property="og:url" content="https://tunesketch.app" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="tunesketch | We are a group of African creatives in different places in the world with a common goal." key="ogabouttitle" />
           <meta property="og:description" content="tunesketch | We are a group of African creatives in different places in the world with a common goal. We aim to cover a large spectrum of music genres and art. We want to connect the thriving diasporan with the nerdy and resourceful African child." key="ogaboutdesc" />
