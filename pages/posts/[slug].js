@@ -63,7 +63,7 @@ const Post = ({post, ogImageUrl}) => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:creator" content="@reachmhp"/>
                 <meta name="twitter:creator" content="@reachmhp" />
-                <meta property="twitter:domain" content="tunesketch.com"/>
+                <meta property="twitter:domain" content="tunesketch.app"/>
                 
                 <meta name="twitter:title" content={post.title}   />
                 <meta name="twitter:description" content={post.description}  />
