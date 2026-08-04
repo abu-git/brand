@@ -6,7 +6,7 @@ function Whatsapp() {
   return (
       <div className="dark:text-black">
           <FloatingWhatsApp
-              phoneNumber="27832459000"
+              phoneNumber="2349064056786"
               accountName="Tunesketch Support (Sam)"
               avatar='/favicon/android-chrome-512x512.png'
               chatMessage="Hi there! 👋🏼 How can I help?"
